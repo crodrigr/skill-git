@@ -1,0 +1,8 @@
+# Solo se publica el material del curso. Todo lo demas
+# (specs, herramientas del generador, scripts sueltos) queda fuera de GitHub.
+/generador-cursos/*
+!/generador-cursos/curso-git
+
+# Artefactos de ejecucion de codigo del curso
+__pycache__/
+*.pyc
