@@ -1,11 +1,11 @@
-# Ejemplo 03 — Navegación del historial
+# 📘 Ejemplo 03 — Navegación del historial
 
-## Estado inicial
+## 🧱 Estado inicial
 
 El repositorio `mi-proyecto/` del Ejemplo 02, con dos commits ya confirmados
 ("Agregar README inicial" y "Agregar script inicial de la aplicacion").
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # Ver el historial completo
@@ -18,7 +18,7 @@ git show df7472d
 git show HEAD~1
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. `git log` (sin `--oneline`) muestra el historial completo: identificador completo
    de cada commit, autor, fecha y mensaje, del más reciente al más antiguo.
@@ -30,7 +30,7 @@ git show HEAD~1
    necesidad de copiar su identificador**.
 4. Ninguno de estos dos comandos modifica el repositorio: solo muestran información.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git log

@@ -1,27 +1,27 @@
-# Fundamentos Git
+# 🧭 Fundamentos Git
 
 ---
 
-## Objetivos de la clase
+## 🎯 Objetivos de la clase
 
-- Entender qué es el control de versiones y por qué importa.
-- Instalar y configurar Git.
-- Crear y gestionar un repositorio local: staging, commits, historial.
-- Documentar un proyecto con `README.md`.
+- 🔹 Entender qué es el control de versiones y por qué importa.
+- 🔹 Instalar y configurar Git.
+- 🔹 Crear y gestionar un repositorio local: staging, commits, historial.
+- 🔹 Documentar un proyecto con `README.md`.
 
 ---
 
-## ¿Qué es el control de versiones?
+## 🗂️ ¿Qué es el control de versiones?
 
 - Registra los cambios de un proyecto a lo largo del tiempo.
 - Permite volver a una versión anterior.
 - Permite colaborar sin pisarse el trabajo.
 
-> Sin él: copias manuales (`final-v2-ahora-si.docx`) y cambios perdidos.
+> 💡 Sin él: copias manuales (`final-v2-ahora-si.docx`) y cambios perdidos.
 
 ---
 
-## Instalación y configuración de Git
+## ⚙️ Instalación y configuración de Git
 
 ```bash
 git --version                              # verificar instalación
@@ -34,7 +34,7 @@ git config --global user.email "tu@correo.com"
 
 ---
 
-## Repositorios locales
+## 📁 Repositorios locales
 
 ```bash
 git init          # crea el repositorio (.git/)
@@ -45,7 +45,7 @@ git status        # muestra el estado actual
 
 ---
 
-## El área de staging
+## 🧺 El área de staging
 
 ```bash
 git add README.md   # prepara un cambio puntual
@@ -57,7 +57,7 @@ git add .            # prepara todos los cambios
 
 ---
 
-## Commits
+## 💾 Commits
 
 ```bash
 git commit -m "Agregar README inicial"
@@ -68,7 +68,7 @@ git commit -m "Agregar README inicial"
 
 ---
 
-## Navegación del historial
+## 🕰️ Navegación del historial
 
 ```bash
 git log              # historial completo
@@ -80,7 +80,7 @@ git show HEAD~1       # "un commit antes del mas reciente"
 
 ---
 
-## El archivo README.md
+## 📄 El archivo README.md
 
 - Primer documento que alguien lee al abrir el repositorio.
 - Mínimo: título, descripción breve, cómo usarlo.
@@ -88,7 +88,7 @@ git show HEAD~1       # "un commit antes del mas reciente"
 
 ---
 
-## Actividad práctica
+## 🛠️ Actividad práctica
 
 **Taller 01**: desde cero, en tu propia computadora —
 
@@ -99,15 +99,15 @@ git show HEAD~1       # "un commit antes del mas reciente"
 
 ---
 
-## Resumen
+## 📌 Resumen
 
-- Control de versiones: historial, reversión, colaboración.
-- Git: instalar → configurar identidad → `init` → `add` → `commit` → `log`/`show`.
+- 📍 Control de versiones: historial, reversión, colaboración.
+- 📍 Git: instalar → configurar identidad → `init` → `add` → `commit` → `log`/`show`.
 - `README.md`: documenta el proyecto, se versiona como cualquier archivo.
-- Lo que sigue (módulo posterior): repositorios remotos y GitHub.
+- 📍 Lo que sigue (módulo posterior): repositorios remotos y GitHub.
 
 ---
 
-## Evaluación
+## 📝 Evaluación
 
 Quiz de 8 preguntas sobre los conceptos y comandos de esta clase.

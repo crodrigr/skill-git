@@ -1,10 +1,12 @@
-# Intermedio 01 — Flujo local completo
+# 🟡 Intermedio 01 — Flujo local completo
 
-## Estado inicial
+> 🟡 **Nivel:** Intermedio · 🎓 **Resultados de aprendizaje:** RA-4, RA-5
+
+## 🧱 Estado inicial
 
 Una carpeta nueva y vacía en tu computadora, con Git ya instalado y configurado.
 
-## Proceso esperado
+## 🛠️ Proceso esperado
 
 1. Inicializar un repositorio en esa carpeta.
 2. Crear un archivo de texto cualquiera con algún contenido.
@@ -15,18 +17,18 @@ Una carpeta nueva y vacía en tu computadora, con Git ya instalado y configurado
    descriptivo distinto al primero.
 6. Crear un segundo archivo y confirmarlo en un tercer commit.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
-- El repositorio tiene al menos 3 commits.
-- Cada commit tiene un mensaje descriptivo propio (no genérico como "cambios").
+- ☑️ El repositorio tiene al menos 3 commits.
+- ☑️ Cada commit tiene un mensaje descriptivo propio (no genérico como "cambios").
 - `git status` no muestra cambios pendientes al finalizar (todo quedó confirmado).
 
-## Restricciones
+## 🚧 Restricciones
 
-- No uses `git commit -m "cambios"`, `"update"` ni mensajes igual de genéricos.
-- Cada commit debe representar un cambio real y distinto de los anteriores.
+- 🚫 No uses `git commit -m "cambios"`, `"update"` ni mensajes igual de genéricos.
+- 🚫 Cada commit debe representar un cambio real y distinto de los anteriores.
 
-## Resultados de aprendizaje
+## 🎓 Resultados de aprendizaje
 
 - RA-4: Crear repositorios locales.
 - RA-5: Gestionar de forma efectiva los cambios mediante el área de staging.

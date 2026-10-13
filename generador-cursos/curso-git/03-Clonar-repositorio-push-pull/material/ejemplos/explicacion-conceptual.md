@@ -1,4 +1,4 @@
-# Explicación conceptual — Clonar un repositorio, hacer push y pull
+# 📚 Explicación conceptual — Clonar un repositorio, hacer push y pull
 
 Esta explicación asume que ya cursaste la Clase 01 (flujo local) y la Clase 02 (ramas,
 merge, y creación y conexión de un repositorio remoto). No se repite ese contenido.
@@ -12,17 +12,17 @@ Resultados de aprendizaje de la clase:
 
 ---
 
-## Clonar
+## 📥 Clonar
 
 _Resultados de aprendizaje: RA-1_
 
-### Contexto
+### 🌍 Contexto
 
 En la Clase 02 creaste un repositorio vacío en GitHub y lo conectaste con uno local que
 ya existía. Pero lo más común en la práctica es lo contrario: el proyecto **ya existe**
 en un remoto y necesitás una copia en tu máquina para trabajar sobre él.
 
-### Concepto
+### 💡 Concepto
 
 **Clonar** es crear una copia local completa de un repositorio remoto. A diferencia de
 copiar una carpeta, el clon trae:
@@ -37,7 +37,7 @@ copiar una carpeta, el clon trae:
 | Conexión con el remoto | La hacés vos con `git remote add` | Ya viene hecha (`origin`) |
 | Historial | Solo el tuyo | Todo el del remoto |
 
-### Explicación
+### 📖 Explicación
 
 ```bash
 git clone <url>                 # crea la carpeta con el nombre del repositorio
@@ -61,17 +61,17 @@ git config --get pull.rebase              # debe imprimir: false
 
 ---
 
-## Pull y push
+## 🔁 Pull y push
 
 _Resultados de aprendizaje: RA-2, RA-3_
 
-### Contexto
+### 🌍 Contexto
 
 Una vez que tenés una copia local, el trabajo ocurre en dos lugares a la vez: tu
 repositorio y el remoto. Lo que hacés en uno no aparece en el otro hasta que lo
 sincronizas.
 
-### Concepto
+### 💡 Concepto
 
 Dos operaciones, una por dirección:
 
@@ -87,7 +87,7 @@ Dos reglas que lo explican casi todo:
 2. **Git solo acepta un push que avanza el historial remoto sin perder nada.** Si el
    remoto tiene commits que vos no tenés, el push se rechaza y debés traerlos primero.
 
-### Explicación
+### 📖 Explicación
 
 **Pull.** Con novedades, Git descarga los commits y los integra. Si tu rama no tenía
 commits propios, el avance es directo (*fast-forward*). Sin novedades, responde
@@ -113,16 +113,16 @@ que abra el editor para su mensaje: guardá y cerrá.
 
 ---
 
-## Ciclo de trabajo y autenticación
+## 🔄 Ciclo de trabajo y autenticación
 
 _Resultados de aprendizaje: RA-2, RA-3_
 
-### Contexto
+### 🌍 Contexto
 
 Con push y pull entendidos por separado, falta un hábito que evite los rechazos y los
 conflictos grandes, y saber qué hacer cuando falla el acceso al remoto.
 
-### Concepto
+### 💡 Concepto
 
 El ciclo recomendado al colaborar en una rama compartida es:
 
@@ -135,7 +135,7 @@ Cuando los cambios chocan en la misma parte de un archivo, el pull termina en un
 **conflicto**: se resuelve igual que en la Clase 02 (editar los marcadores, `git add`,
 `git commit`).
 
-### Explicación
+### 📖 Explicación
 
 **Verificación del token.** En la Clase 02 creaste un *Personal Access Token* para
 autenticarte por HTTPS. Antes de clonar o hacer push, comprobá que sigue vigente:
@@ -160,16 +160,16 @@ el repositorio no existe para nadie; en el segundo, existe pero no para vos.
 
 ---
 
-## Revertir cambios
+## ↩️ Revertir cambios
 
 _Resultados de aprendizaje: RA-4_
 
-### Contexto
+### 🌍 Contexto
 
 Tarde o temprano confirmarás —y quizá ya publicaste— un cambio equivocado. Hay que
 corregirlo sin romper el trabajo de quienes ya descargaron el historial.
 
-### Concepto
+### 💡 Concepto
 
 **Revertir** (`git revert`) crea un **commit nuevo** que deshace los cambios de un
 commit anterior. El commit original **no se borra**: el historial solo crece.
@@ -186,7 +186,7 @@ publicados, las demás personas reciben la corrección con un simple `git pull`.
 En esta clase solo se practica `git revert`; `restore` y `reset` se mencionan para que
 sepas distinguirlos.
 
-### Explicación
+### 📖 Explicación
 
 ```bash
 git log --oneline                   # localiza el commit erróneo y copia su identificador

@@ -1,17 +1,17 @@
-# Taller 01 — Colaborar con dos copias de tu diario
+# 🛠️ Taller 01 — Colaborar con dos copias de tu diario
 
-## Objetivo
+## 🎯 Objetivo
 
 Aplicar en un proyecto real los cuatro resultados de la clase: clonar (RA-1),
 descargar cambios (RA-2), enviar cambios (RA-3) y revertir un commit publicado (RA-4).
 
-## Contexto
+## 🌍 Contexto
 
 Seguirás trabajando sobre el repositorio `diario` que creaste en la Clase 02 y que ya
 está en tu cuenta de GitHub. Para simular que dos personas colaboran, tendrás dos copias
 locales del mismo repositorio en carpetas distintas (copia A y copia B).
 
-## Pasos
+## 🪜 Pasos
 
 1. Verificá que tu token de acceso a GitHub sigue vigente y configurá
    `pull.rebase false`.
@@ -25,15 +25,15 @@ locales del mismo repositorio en carpetas distintas (copia A y copia B).
 7. Elegí un commit ya publicado (o creá uno con un dato incorrecto y publicalo),
    revertilo, enviá la reversión y comprobá que la otra copia la recibe con pull.
 
-## Entregable
+## 📦 Entregable
 
 Tu repositorio `diario` en GitHub con un commit de reversión publicado, y dos copias
 locales sincronizadas con el remoto (`git status` en ambas debe indicar que están al día
 con `origin`).
 
-## Criterios de evaluación
+## 📋 Criterios de evaluación
 
-- Ambos repositorios se clonaron correctamente y el remoto de origen está configurado.
-- El pull trajo los cambios sin pérdida de commits.
-- El push rechazado se resolvió con pull y no con reescritura de historial.
-- La reversión se publicó como commit nuevo y el historial previo se conserva.
+- ✔️ Ambos repositorios se clonaron correctamente y el remoto de origen está configurado.
+- ✔️ El pull trajo los cambios sin pérdida de commits.
+- ✔️ El push rechazado se resolvió con pull y no con reescritura de historial.
+- ✔️ La reversión se publicó como commit nuevo y el historial previo se conserva.

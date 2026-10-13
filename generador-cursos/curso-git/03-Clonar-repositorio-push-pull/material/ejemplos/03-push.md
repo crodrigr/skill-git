@@ -1,12 +1,12 @@
-# Ejemplo 03 — Push: commits y primer envío de una rama nueva
+# 📘 Ejemplo 03 — Push: commits y primer envío de una rama nueva
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Tu copia de `diario` sincronizada con el remoto, en la rama `master`, con
 `pull.rebase false` configurado. El remoto es un repositorio `--bare` local en lugar de
 GitHub real.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # 1. Un commit nuevo y su envío
@@ -24,7 +24,7 @@ git push -u origin entrada-viaje           # primer envío con enlace
 git branch -vv                             # ver el enlace con la rama remota
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. `git commit -am` confirma el cambio en tu repositorio local; en este punto el
    remoto no sabe nada. `git push` publica el commit: la línea `a17a2c4..e3d9824`
@@ -39,7 +39,7 @@ git branch -vv                             # ver el enlace con la rama remota
    `git push` y `git pull` en esa rama.
 5. `git branch -vv` muestra el enlace: `[origin/entrada-viaje]` junto a la rama local.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git push
@@ -62,5 +62,5 @@ $ git branch -vv
   master        e3d9824 [origin/master] Agregar entrada 3
 ```
 
-(Con un remoto real verás además líneas de progreso como `Enumerating objects...`.
-Los identificadores serán distintos en tu repositorio.)
+> 💡 Con un remoto real verás además líneas de progreso como `Enumerating objects...`.
+> Los identificadores serán distintos en tu repositorio.

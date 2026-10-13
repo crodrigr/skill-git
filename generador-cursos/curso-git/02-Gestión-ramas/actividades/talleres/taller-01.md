@@ -1,17 +1,17 @@
-# Taller 01 — Ramas y primer remoto
+# 🛠️ Taller 01 — Ramas y primer remoto
 
-## Objetivo
+## 🎯 Objetivo
 
 Gestionar ramas de principio a fin (RA-1, RA-3) y dar el primer paso hacia la
 colaboración remota (RA-2, RA-4), continuando el proyecto del Taller 01 de la Clase
 01 — Fundamentos Git.
 
-## Contexto
+## 🌍 Contexto
 
 Vas a seguir desarrollando el repositorio que armaste en la Clase 01, ahora
 organizando los cambios en ramas y publicándolo en un repositorio remoto en GitHub.
 
-## Pasos
+## 🪜 Pasos
 
 1. Crear una rama nueva para una mejora o cambio puntual de tu proyecto.
 2. Trabajar en esa rama y confirmar al menos un commit.
@@ -24,14 +24,14 @@ organizando los cambios en ramas y publicándolo en un repositorio remoto en Git
    tu `README.md`) y confirmarlo ahí.
 8. Traer ese cambio a tu repositorio local (`git pull origin master`).
 
-## Entregable
+## 📦 Entregable
 
 Un repositorio con al menos una rama creada, trabajada y fusionada, conectado a un
 repositorio remoto en GitHub, con el historial local y remoto sincronizados.
 
-## Criterios de evaluación
+## 📋 Criterios de evaluación
 
-- La rama se creó, se usó y se fusionó correctamente, sin perder commits.
-- El repositorio remoto existe en GitHub y está conectado al local.
-- El cambio hecho desde la interfaz web de GitHub llegó correctamente al
+- ✔️ La rama se creó, se usó y se fusionó correctamente, sin perder commits.
+- ✔️ El repositorio remoto existe en GitHub y está conectado al local.
+- ✔️ El cambio hecho desde la interfaz web de GitHub llegó correctamente al
   repositorio local tras el `pull`.

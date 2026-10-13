@@ -1,11 +1,13 @@
-# Intermedio 01 — Enviar cambios con push y resolver un rechazo
+# 🟡 Intermedio 01 — Enviar cambios con push y resolver un rechazo
 
-## Estado inicial
+> 🟡 **Nivel:** Intermedio · 🎓 **Resultados de aprendizaje:** RA-2, RA-3
+
+## 🧱 Estado inicial
 
 Las mismas dos copias de `diario` (A tuya, B de otra persona), sincronizadas con el
 remoto en `master`. `pull.rebase` es `false`.
 
-## Proceso esperado
+## 🛠️ Proceso esperado
 
 1. En la copia A, confirmar un cambio y enviarlo al remoto. Comprobar que el remoto lo
    refleja (por ejemplo, desde la copia B).
@@ -18,21 +20,21 @@ remoto en `master`. `pull.rebase` es `false`.
    que el envío se complete.
 5. Mostrar el historial final.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
-- El remoto contiene el commit del paso 1 y la rama nueva del paso 2, con la rama local
+- ☑️ El remoto contiene el commit del paso 1 y la rama nueva del paso 2, con la rama local
   enlazada a la remota.
-- El envío del paso 3 es rechazado y el mensaje se interpreta correctamente: el remoto
+- ☑️ El envío del paso 3 es rechazado y el mensaje se interpreta correctamente: el remoto
   tiene trabajo que la copia A no tiene.
-- Tras resolverlo, el remoto contiene los commits de ambas copias y ninguno se perdió.
+- ☑️ Tras resolverlo, el remoto contiene los commits de ambas copias y ninguno se perdió.
 
-## Restricciones
+## 🚧 Restricciones
 
-- Los dos cambios del paso 3 deben tocar **archivos distintos** (así el rechazo se
+- 🚫 Los dos cambios del paso 3 deben tocar **archivos distintos** (así el rechazo se
   resuelve sin conflicto).
-- Está prohibido forzar el envío.
+- 🚫 Está prohibido forzar el envío.
 
-## Resultados de aprendizaje
+## 🎓 Resultados de aprendizaje
 
 - RA-3: Enviar cambios del repositorio local al repositorio remoto.
 - RA-2: Descargar actualizaciones del repositorio remoto al repositorio local.

@@ -1,13 +1,15 @@
-# Desafío 01 — Conflictos y archivos ignorados en un mismo proyecto
+# 🔴 Desafío 01 — Conflictos y archivos ignorados en un mismo proyecto
 
-## Estado inicial
+> 🔴 **Nivel:** Desafío · 🎓 **Resultados de aprendizaje:** RA-1, RA-2
+
+## 🧱 Estado inicial
 
 Dos copias de tu repositorio `diario` (A tuya, B de otra persona), sincronizadas con el
 remoto en `master`. `pull.rebase` es `false`. En el repositorio ya se confirmó y se
 publicó por descuido un archivo `credenciales.txt` con contenido ficticio (**NO REAL**),
 y además hay archivos `.log` sin confirmar en cada copia.
 
-## Proceso esperado
+## 🛠️ Proceso esperado
 
 1. **Conflicto en pull.** Cambiar la misma línea de `diario.txt` en las dos copias,
    publicar primero desde B, y traer los cambios en A. Resolver el conflicto combinando
@@ -24,29 +26,29 @@ y además hay archivos `.log` sin confirmar en cada copia.
    `credenciales.txt` sigue estando en el historial del remoto y qué habría que hacer con
    esa credencial si fuera real.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
-- El historial remoto contiene los commits de ambas copias, el commit de fusión del
+- ☑️ El historial remoto contiene los commits de ambas copias, el commit de fusión del
   paso 1, los dos commits del paso 2, el commit de reversión y el commit que dejó de
   rastrear el archivo.
 - `diario.txt` no contiene la línea incorrecta del paso 2 ni su ampliación.
 - `credenciales.txt` existe en el disco de A, pero ya no está rastreado, y `.gitignore`
   está versionado en el remoto.
-- La explicación del paso 5 es correcta y no propone reescribir el historial.
+- ☑️ La explicación del paso 5 es correcta y no propone reescribir el historial.
 
-## Restricciones
+## 🚧 Restricciones
 
-- Prohibido forzar el envío, borrar commits y reescribir el historial.
-- Los mensajes de commit deben ser descriptivos.
-- Antes de cada confirmación posterior a un conflicto, comprobar que no quedan marcadores.
-- No usar credenciales reales.
+- 🚫 Prohibido forzar el envío, borrar commits y reescribir el historial.
+- 🚫 Los mensajes de commit deben ser descriptivos.
+- 🚫 Antes de cada confirmación posterior a un conflicto, comprobar que no quedan marcadores.
+- 🚫 No usar credenciales reales.
 
-## Resultados de aprendizaje
+## 🎓 Resultados de aprendizaje
 
 - RA-1: Resolver los conflictos que surgen al trabajar con repositorios locales y remotos.
 - RA-2: Evitar que ciertos archivos sean rastreados por Git, y corregir el caso de los ya rastreados.
 
-## Casos de prueba
+## 🧪 Casos de prueba
 
 | Acción | Resultado esperado |
 |---|---|

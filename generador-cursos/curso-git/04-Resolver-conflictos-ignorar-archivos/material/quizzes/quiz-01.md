@@ -1,11 +1,11 @@
-# Quiz 01 — Resolver conflictos e ignorar archivos
+# 📝 Quiz 01 — Resolver conflictos e ignorar archivos
 
 8 ítems. Sin respuestas (ver `material/soluciones/soluciones-quiz.md` para la clave,
 material exclusivamente docente).
 
 ---
 
-**1. [selección múltiple]**
+**1. [selección múltiple]** 🔘
 ¿En cuál de estas situaciones Git detiene una fusión y marca un conflicto?
 
 A. Cuando dos ramas modificaron archivos distintos.
@@ -17,7 +17,7 @@ _RA: RA-1_
 
 ---
 
-**2. [selección múltiple]**
+**2. [selección múltiple]** 🔘
 Una fusión se detuvo con conflictos. ¿Qué comando te muestra qué archivos requieren tu
 decisión y cuáles ya se fusionaron solos?
 
@@ -30,7 +30,7 @@ _RA: RA-1_
 
 ---
 
-**3. [selección múltiple]**
+**3. [selección múltiple]** 🔘
 Estás en medio de una fusión con conflictos y decidís no continuar. ¿Qué hace
 `git merge --abort`?
 
@@ -43,7 +43,7 @@ _RA: RA-1_
 
 ---
 
-**4. [selección múltiple]**
+**4. [selección múltiple]** 🔘
 ¿Para qué sirve el archivo `.gitignore`?
 
 A. Para borrar del disco los archivos que se ignoran.
@@ -55,7 +55,7 @@ _RA: RA-2_
 
 ---
 
-**5. [identificación de resultado]**
+**5. [identificación de resultado]** 🔎
 Observá este archivo después de una fusión con conflicto:
 
 ```text
@@ -75,7 +75,7 @@ _RA: RA-1_
 
 ---
 
-**6. [identificación de resultado]**
+**6. [identificación de resultado]** 🔎
 El proyecto tiene un `.gitignore` con la línea `*.log`, y ejecutás:
 
 ```console
@@ -89,7 +89,7 @@ _RA: RA-2_
 
 ---
 
-**7. [corrección de errores]**
+**7. [corrección de errores]** 🐞
 Un compañero confirmó por descuido un archivo `credenciales.txt` (con datos de prueba) y
 ya lo publicó. Después lo agregó al `.gitignore` y ejecutó `git status`: el archivo sigue
 apareciendo cuando lo modifica. Él piensa que Git "ignora el `.gitignore`".
@@ -102,7 +102,7 @@ _RA: RA-2_
 
 ---
 
-**8. [problema breve]**
+**8. [problema breve]** ✍️
 Hacés `git pull` y termina en conflicto en `diario.txt`. Escribí la secuencia completa de
 comandos para: (a) identificar el archivo en conflicto, (b) comprobar que no quedan
 marcadores una vez resuelto, (c) completar la fusión y (d) publicar el resultado.

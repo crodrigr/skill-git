@@ -1,6 +1,6 @@
-# Ejemplo 02 — Pull: con novedades, sin novedades y con cambios locales
+# 📘 Ejemplo 02 — Pull: con novedades, sin novedades y con cambios locales
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Dos copias del repositorio `diario` de la Clase 02, ambas sincronizadas con el remoto:
 tu copia (`diario`) y una que simula a otra persona (`otra-persona`, clonada del mismo
@@ -8,7 +8,7 @@ remoto). El archivo `diario.txt` tiene tres líneas: el título y dos entradas. 
 `pull.rebase false` (Ejemplo 01). El remoto es un repositorio `--bare` local, igual que
 en la Clase 02.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # En la copia "otra-persona": agrega una entrada y la publica
@@ -37,7 +37,7 @@ git stash pop
 cat diario.txt
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. La otra persona publicó un commit que tu copia no tiene. `git pull` lo descarga
    (`From ...`) y, como vos no tenías commits propios, lo integra con un avance directo
@@ -53,7 +53,7 @@ cat diario.txt
    líneas distintas, se combinan solos. (La otra salida válida habría sido confirmar
    tu cambio antes de hacer pull.)
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git pull
@@ -113,5 +113,5 @@ Entrada 3: aprendi a clonar
 Entrada 4: aprendi pull
 ```
 
-(Los identificadores de commit serán distintos en tu repositorio. En el resultado se
-omitieron líneas de ayuda de Git que no cambian el significado.)
+> 💡 Los identificadores de commit serán distintos en tu repositorio. En el resultado se
+> omitieron líneas de ayuda de Git que no cambian el significado.

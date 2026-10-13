@@ -1,18 +1,18 @@
-# Taller 01 — Mi primer repositorio documentado
+# 🛠️ Taller 01 — Mi primer repositorio documentado
 
-## Objetivo
+## 🎯 Objetivo
 
 Crear, gestionar y documentar un repositorio local propio de principio a fin,
 integrando instalación/configuración (RA-2, RA-3), repositorio y staging (RA-4, RA-5),
 commits e historial (RA-6) y README.md (RA-7).
 
-## Contexto
+## 🌍 Contexto
 
 Vas a convertir en un proyecto versionado algo que ya tengas (o un proyecto nuevo y
 simple): una lista de notas, un pequeño script, o cualquier conjunto de archivos de
 texto que te resulte significativo.
 
-## Pasos
+## 🪜 Pasos
 
 1. Verificar que Git está instalado y tu identidad configurada (`git --version`,
    `git config --list`); si falta algo, resolverlo antes de seguir.
@@ -24,15 +24,15 @@ texto que te resulte significativo.
 5. Navegar el historial completo con `git log` y usar `git show` para identificar y
    describir, en voz alta o por escrito, el contenido de un commit específico.
 
-## Entregable
+## 📦 Entregable
 
 Un repositorio local propio con al menos 3 commits y un `README.md` confirmado en el
 historial.
 
-## Criterios de evaluación
+## 📋 Criterios de evaluación
 
-- Los commits tienen mensajes descriptivos (no "cambios", "update", etc.).
-- El `README.md` describe el proyecto con una estructura mínima razonable (qué es,
+- ✔️ Los commits tienen mensajes descriptivos (no "cambios", "update", etc.).
+- ✔️ El `README.md` describe el proyecto con una estructura mínima razonable (qué es,
   cómo se usa).
-- El estudiante puede ubicar y describir correctamente el contenido de un commit
+- ✔️ El estudiante puede ubicar y describir correctamente el contenido de un commit
   puntual del historial usando `git log`/`git show`.

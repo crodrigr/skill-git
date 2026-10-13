@@ -1,8 +1,8 @@
-# Explicación conceptual — Fundamentos Git
+# 📚 Explicación conceptual — Fundamentos Git
 
-## Control de versiones
+## 🗂️ Control de versiones
 
-### Contexto
+### 🌍 Contexto
 
 Imagina que estás escribiendo un documento importante y vas guardando copias con
 nombres como `informe-final.docx`, `informe-final-v2.docx`, `informe-final-v2-ahora-si.docx`.
@@ -10,7 +10,7 @@ Al tercer o cuarto cambio ya no sabes cuál es la versión buena, qué cambiaste
 y otra, ni cómo volver atrás si algo salió mal. Con código pasa lo mismo, pero además
 varias personas pueden estar modificando los mismos archivos al mismo tiempo.
 
-### Concepto
+### 💡 Concepto
 
 El **control de versiones** es la práctica de registrar los cambios de un conjunto de
 archivos a lo largo del tiempo, de forma que se pueda consultar el historial completo,
@@ -18,7 +18,7 @@ volver a una versión anterior, y entender exactamente qué cambió, cuándo y p
 **Git** es el sistema de control de versiones más usado hoy para administrar código
 fuente (aunque sirve para cualquier archivo de texto).
 
-### Explicación
+### 📖 Explicación
 
 Git resuelve tres problemas a la vez:
 
@@ -33,22 +33,22 @@ A diferencia de guardar copias manuales de archivos, Git no duplica todo el proy
 cada cambio: guarda únicamente las diferencias necesarias para reconstruir cualquier
 versión del historial, de forma eficiente.
 
-## Instalación y configuración
+## ⚙️ Instalación y configuración
 
-### Contexto
+### 🌍 Contexto
 
 Antes de poder usar cualquiera de estas ventajas, Git tiene que estar instalado en la
 computadora y "saber quién sos": cada cambio que se confirme queda firmado con un
 nombre y un correo electrónico.
 
-### Concepto
+### 💡 Concepto
 
 La instalación de Git depende del sistema operativo (Windows, macOS o Linux), pero el
 resultado es el mismo en los tres casos: un comando `git` disponible en la terminal. La
 configuración inicial establece la **identidad** que acompañará a cada commit que se
 haga desde esa computadora.
 
-### Explicación
+### 📖 Explicación
 
 **Instalación**:
 
@@ -82,16 +82,16 @@ git config --list
 Si se intenta confirmar un commit sin esta configuración, Git se detiene y pide
 configurarla antes de continuar (ver Ejercicio Básico 01).
 
-## Repositorio y staging
+## 📁 Repositorio y staging
 
-### Contexto
+### 🌍 Contexto
 
 Con Git ya instalado y configurado, el siguiente paso es convertir una carpeta
 cualquiera en un proyecto versionado. Pero no todo lo que se modifica en esa carpeta
 queda registrado automáticamente: hace falta decirle a Git, explícitamente, qué
 cambios se quieren confirmar.
 
-### Concepto
+### 💡 Concepto
 
 Un **repositorio** es una carpeta bajo control de Git: a partir de `git init`, Git
 empieza a llevar un registro de los archivos que elijamos. El **área de staging**
@@ -99,7 +99,7 @@ empieza a llevar un registro de los archivos que elijamos. El **área de staging
 archivo" y "confirmarlo en el historial": ahí se preparan los cambios que van a formar
 parte del próximo commit.
 
-### Explicación
+### 📖 Explicación
 
 - `git init` crea un repositorio nuevo en la carpeta actual (una subcarpeta oculta
   `.git/` guarda todo el historial).
@@ -113,21 +113,21 @@ parte del próximo commit.
 cambios que se quieren confirmar, incluso si hay otros archivos modificados que todavía
 no están listos para confirmarse.
 
-## Commits e historial
+## 💾 Commits e historial
 
-### Contexto
+### 🌍 Contexto
 
 Ya con cambios en el área de staging, falta el paso que realmente los registra en el
 historial del proyecto: el commit.
 
-### Concepto
+### 💡 Concepto
 
 Un **commit** es una fotografía confirmada del estado del proyecto en un momento dado,
 acompañada de un mensaje que describe qué cambió y por qué. El conjunto de todos los
 commits de un repositorio forma su **historial**, que se puede consultar y navegar sin
 modificar nada.
 
-### Explicación
+### 📖 Explicación
 
 - `git commit -m "mensaje descriptivo"` confirma los cambios que están en el área de
   staging y los agrega como un nuevo commit al historial.
@@ -143,22 +143,22 @@ Navegar el historial con `git log` y `git show` es una operación de **solo lect
 no modifica el repositorio, a diferencia de otros comandos de Git que sí lo hacen (y
 que quedan fuera del alcance de esta clase).
 
-## README.md
+## 📄 README.md
 
-### Contexto
+### 🌍 Contexto
 
 Un repositorio bien gestionado, con commits claros, igual puede ser difícil de
 entender para alguien que lo abre por primera vez si no explica de qué se trata el
 proyecto.
 
-### Concepto
+### 💡 Concepto
 
 El archivo **`README.md`** es el primer documento que alguien lee al llegar a un
 repositorio (muchas plataformas, incluido GitHub, lo muestran automáticamente en la
 página principal del proyecto). Se escribe en Markdown y describe, como mínimo, qué es
 el proyecto y cómo se usa.
 
-### Explicación
+### 📖 Explicación
 
 Un `README.md` mínimo razonable suele incluir:
 

@@ -1,12 +1,12 @@
-# Ejemplo 04 — Push rechazado: pull y reintento
+# 📘 Ejemplo 04 — Push rechazado: pull y reintento
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Dos copias de `diario` sincronizadas con el remoto, en la rama `master`: tu copia
 (`diario`) y la de otra persona (`otra-persona`). Se asume `pull.rebase false`. El
 remoto es un repositorio `--bare` local en lugar de GitHub real.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # "Otra persona" publica primero:
@@ -31,7 +31,7 @@ git log --oneline --graph
 git push
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. La otra persona publicó un commit. Ahora el remoto tiene un commit que tu copia no
    tiene; tu copia tiene uno (`resumen.txt`) que el remoto tampoco tiene: los historiales
@@ -49,7 +49,7 @@ git push
 5. Ahora el historial local contiene todo lo del remoto, y `git push` se acepta. La
    solución **nunca** es forzar el envío: eso borraría el commit de la otra persona.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git push
@@ -83,4 +83,4 @@ To https://github.com/tu-usuario/diario.git
    072833b..293b92b  master -> master
 ```
 
-(Los identificadores serán distintos en tu repositorio.)
+> 💡 Los identificadores serán distintos en tu repositorio.

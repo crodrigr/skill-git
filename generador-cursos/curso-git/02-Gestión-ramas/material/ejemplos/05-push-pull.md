@@ -1,13 +1,13 @@
-# Ejemplo 05 — Publicar y traer cambios
+# 📘 Ejemplo 05 — Publicar y traer cambios
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Dos copias del mismo proyecto conectadas al mismo remoto (en este ejemplo, un
 repositorio `--bare` local, en lugar de GitHub real — ver Ejemplo 04): tu repositorio
 (`ej05-local`) y uno que simula a otra persona colaborando (`ej05-otra-persona`,
 clonado del mismo remoto).
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # En tu repositorio local, primera publicacion:
@@ -41,7 +41,7 @@ git commit -m "Fusionar cambios del remoto con la entrada local"
 git push origin master
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. El primer `git push -u origin master` publica el historial inicial y deja
    configurado que tu rama local `master` sigue a `origin/master` (el `-u` solo hace
@@ -61,7 +61,7 @@ git push origin master
 6. Recién ahora `git push` se completa sin problemas: el historial local ya
    incorpora el commit que faltaba.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git push -u origin master
@@ -107,5 +107,5 @@ Segunda entrada del diario
 Entrada distinta desde el otro lado
 ```
 
-(Las rutas `.../remoto-ej05.git` y los identificadores de commit van a ser distintos
-en tu propio repositorio; en GitHub real, la ruta sería una URL `https://github.com/...`.)
+> 💡 Las rutas `.../remoto-ej05.git` y los identificadores de commit van a ser distintos
+> en tu propio repositorio; en GitHub real, la ruta sería una URL `https://github.com/...`.

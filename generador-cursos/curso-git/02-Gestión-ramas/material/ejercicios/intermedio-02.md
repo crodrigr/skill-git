@@ -1,10 +1,12 @@
-# Intermedio 02 — Crear un repositorio remoto y conectarlo
+# 🟡 Intermedio 02 — Crear un repositorio remoto y conectarlo
 
-## Estado inicial
+> 🟡 **Nivel:** Intermedio · 🎓 **Resultados de aprendizaje:** RA-2
+
+## 🧱 Estado inicial
 
 Un repositorio local propio con al menos un commit.
 
-## Proceso esperado
+## 🛠️ Proceso esperado
 
 1. Crear un repositorio remoto nuevo (en GitHub, o un repositorio `--bare` local si
    estás practicando sin conexión a internet).
@@ -12,16 +14,16 @@ Un repositorio local propio con al menos un commit.
    `origin`.
 3. Verificar que la conexión quedó establecida correctamente.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 - `git remote -v` muestra `origin` con la URL o ruta correcta, tanto para `fetch`
   como para `push`.
 
-## Restricciones
+## 🚧 Restricciones
 
-- Usa el nombre `origin` para el remoto (es la convención que vas a encontrar en
+- 🚫 Usa el nombre `origin` para el remoto (es la convención que vas a encontrar en
   casi todos los proyectos).
 
-## Resultados de aprendizaje
+## 🎓 Resultados de aprendizaje
 
 - RA-2: Generar un repositorio remoto.

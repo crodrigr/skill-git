@@ -1,11 +1,11 @@
-# Quiz 01 — Fundamentos Git
+# 📝 Quiz 01 — Fundamentos Git
 
 8 ítems. Sin respuestas (ver `material/soluciones/soluciones-quiz.md` para la clave,
 material exclusivamente docente).
 
 ---
 
-**1. [selección múltiple]**
+**1. [selección múltiple]** 🔘
 ¿Cuál de las siguientes opciones describe mejor qué es el control de versiones?
 
 A. Un programa para editar código fuente.
@@ -18,7 +18,7 @@ _RA: RA-1_
 
 ---
 
-**2. [selección múltiple]**
+**2. [selección múltiple]** 🔘
 ¿Qué comando se usa para comprobar que Git está instalado correctamente?
 
 A. `git install --check`
@@ -30,7 +30,7 @@ _RA: RA-2_
 
 ---
 
-**3. [selección múltiple]**
+**3. [selección múltiple]** 🔘
 ¿Qué comando configura el nombre de usuario que va a aparecer en los commits de todos
 tus repositorios?
 
@@ -43,7 +43,7 @@ _RA: RA-3_
 
 ---
 
-**4. [selección múltiple]**
+**4. [selección múltiple]** 🔘
 ¿Qué comando convierte una carpeta común en un repositorio de Git?
 
 A. `git start`
@@ -55,7 +55,7 @@ _RA: RA-4_
 
 ---
 
-**5. [identificación de resultado]**
+**5. [identificación de resultado]** 🔎
 Partiendo de un repositorio recién inicializado (sin commits), creás un archivo nuevo
 `notas.txt` pero todavía no ejecutaste ningún otro comando. ¿Qué va a mostrar
 `git status` respecto de `notas.txt`?
@@ -64,7 +64,7 @@ _RA: RA-5_
 
 ---
 
-**6. [identificación de resultado]**
+**6. [identificación de resultado]** 🔎
 En un repositorio donde se hicieron, en este orden, los commits "Agregar estructura
 inicial" y luego "Agregar validacion de datos", ¿qué va a mostrar
 `git log --oneline` (de arriba hacia abajo)?
@@ -73,7 +73,7 @@ _RA: RA-6_
 
 ---
 
-**7. [corrección de errores]**
+**7. [corrección de errores]** 🐞
 Un estudiante ejecuta esta secuencia y se sorprende de que `git log` no muestra ningún
 commit nuevo:
 
@@ -88,7 +88,7 @@ _RA: RA-5, RA-6_
 
 ---
 
-**8. [problema breve]**
+**8. [problema breve]** ✍️
 Escribí, en orden, la secuencia completa de comandos de Git necesaria para: crear un
 repositorio nuevo en una carpeta vacía, crear un archivo `README.md` con un título
 cualquiera, confirmarlo en un commit con un mensaje descriptivo, y por último mostrar

@@ -1,4 +1,4 @@
-# Soluciones — Ejercicios de la Clase 03 (material docente)
+# 🔑 Soluciones — Ejercicios de la Clase 03 (material docente)
 
 No compartir este archivo con los estudiantes.
 
@@ -13,7 +13,7 @@ empty repository` de la preparación es esperado (se clonan remotos vacíos ante
 
 ---
 
-## Preparación común (docente)
+## 🧰 Preparación común (docente)
 
 Estado inicial de los ejercicios: el repositorio de ejemplo del docente, el repositorio
 `diario` de la Clase 02 y dos copias de este último (A tuya, B de otra persona).
@@ -40,9 +40,9 @@ git clone -q https://github.com/tu-usuario/diario.git diario-B
 
 ---
 
-## Básico 01 — Clonar un repositorio
+## 🟢 Básico 01 — Clonar un repositorio
 
-### Comandos
+### 💻 Comandos
 
 ```bash
 git clone https://github.com/docente-git/proyecto-ejemplo.git
@@ -55,7 +55,7 @@ cd ..
 git clone https://github.com/docente-git/proyecto-ejemplo.git mi-ejemplo
 ```
 
-### Explicación
+### 📖 Explicación
 
 El primer `clone` crea la carpeta `proyecto-ejemplo`; el segundo, `mi-ejemplo`. Dentro
 de un clon, `git remote -v` muestra `origin` ya configurado (sin `git remote add`),
@@ -63,7 +63,7 @@ de un clon, `git remote -v` muestra `origin` ya configurado (sin `git remote add
 (`origin/master`, `origin/mejoras`). El tercer `clone` falla porque `mi-ejemplo` ya
 existe y no está vacía.
 
-### Resultado esperado
+### ✅ Resultado esperado
 
 ```console
 $ git remote -v
@@ -81,16 +81,16 @@ $ git clone https://github.com/docente-git/proyecto-ejemplo.git mi-ejemplo
 fatal: destination path 'mi-ejemplo' already exists and is not an empty directory.
 ```
 
-### Verificación
+### 🔎 Verificación
 
 `git remote -v` apunta al repositorio de ejemplo, el historial tiene 2 commits y
 aparecen las ramas remotas `master` y `mejoras`. Dos carpetas de clon existen.
 
 ---
 
-## Básico 02 — Descargar cambios con pull
+## 🟢 Básico 02 — Descargar cambios con pull
 
-### Comandos
+### 💻 Comandos
 
 ```bash
 # Copia B: agrega y publica una entrada
@@ -108,13 +108,13 @@ git log --oneline
 git pull
 ```
 
-### Explicación
+### 📖 Explicación
 
 Hasta que A hace pull, el archivo de A no tiene la entrada 3: el commit de B existe en
 el remoto, no en A. `git pull` descarga y avanza (`Fast-forward`); un segundo pull
 responde `Already up to date.`
 
-### Resultado esperado
+### ✅ Resultado esperado
 
 ```console
 $ git pull
@@ -129,16 +129,16 @@ $ git pull
 Already up to date.
 ```
 
-### Verificación
+### 🔎 Verificación
 
 `diario.txt` de A contiene "Entrada 3: aprendi a clonar" tras el pull y no la contenía
 antes.
 
 ---
 
-## Intermedio 01 — Enviar cambios con push y resolver un rechazo
+## 🟡 Intermedio 01 — Enviar cambios con push y resolver un rechazo
 
-### Comandos
+### 💻 Comandos
 
 ```bash
 cd diario-A
@@ -174,7 +174,7 @@ git push
 git log --oneline --graph
 ```
 
-### Explicación
+### 📖 Explicación
 
 El primer push publica el commit en `master`. La rama nueva necesita `-u` en su primer
 envío para quedar enlazada con `origin/entrada-viaje`. En el paso 3, B publica antes;
@@ -183,7 +183,7 @@ commit que A no tiene. Como los cambios tocan archivos distintos, `git pull` cre
 commit de fusión sin conflicto y el siguiente `git push` se acepta. No se fuerza el
 envío en ningún momento.
 
-### Resultado esperado
+### ✅ Resultado esperado
 
 ```console
 $ git push -u origin entrada-viaje
@@ -205,7 +205,7 @@ $ git log --oneline --graph
 * <id> Crear diario con dos entradas
 ```
 
-### Verificación
+### 🔎 Verificación
 
 `git branch -vv` muestra `[origin/entrada-viaje]`; el rechazo ocurre en el paso 3; al
 final, el historial remoto contiene los commits de A y de B (`git log --oneline
@@ -213,9 +213,9 @@ origin/master` en cualquiera de las copias).
 
 ---
 
-## Intermedio 02 — Revertir un commit y propagarlo
+## 🟡 Intermedio 02 — Revertir un commit y propagarlo
 
-### Comandos
+### 💻 Comandos
 
 ```bash
 cd diario-A
@@ -243,13 +243,13 @@ cat diario.txt
 git log --oneline
 ```
 
-### Explicación
+### 📖 Explicación
 
 `git revert` crea un commit nuevo que deshace el cambio y conserva el original. Al
 publicarlo, el remoto queda corregido. B lo recibe con un `pull` de avance directo
 (`Fast-forward`), sin conflictos, porque no se reescribió historial.
 
-### Resultado esperado
+### ✅ Resultado esperado
 
 ```console
 $ git revert --no-edit <id>
@@ -265,16 +265,16 @@ Entrada 1: instale Git
 Entrada 2: cree mi primera rama
 ```
 
-### Verificación
+### 🔎 Verificación
 
 El historial de A y de B contiene el commit erróneo y el de reversión consecutivos; el
 archivo no contiene "en la nube".
 
 ---
 
-## Desafío 01 — Divergencia, conflicto y reversión
+## 🔴 Desafío 01 — Divergencia, conflicto y reversión
 
-### Comandos
+### 💻 Comandos
 
 ```bash
 # 1. misma línea editada en A y en B
@@ -324,7 +324,7 @@ cat diario.txt
 git log --oneline
 ```
 
-### Explicación
+### 📖 Explicación
 
 **Paso 1.** Ambas copias editaron la línea 2: el push de A es rechazado; el `pull`
 termina en conflicto (`CONFLICT (content)`). Se resuelve como en la Clase 02: editar los
@@ -338,7 +338,7 @@ su ampliación, `git add` y `git revert --continue`. Si se prefiere desistir:
 
 **Pasos 4 y 5.** El push publica la reversión; B la recibe con `Fast-forward`.
 
-### Resultado esperado
+### ✅ Resultado esperado
 
 ```console
 $ git push
@@ -373,7 +373,7 @@ Entrada 1: instale Git y lo configure (version conjunta)
 Entrada 2: cree mi primera rama
 ```
 
-### Verificación
+### 🔎 Verificación
 
 Se cumplen los casos de prueba del Desafío: rechazo en el paso 1, conflicto en el pull,
 commit de fusión en el remoto, conflicto al revertir (`UU`), reversión encima de los dos

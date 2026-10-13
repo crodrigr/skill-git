@@ -1,18 +1,18 @@
-# Resolver conflictos e ignorar archivos
+# 🧩 Resolver conflictos e ignorar archivos
 
 ---
 
-## Objetivos de la clase
+## 🎯 Objetivos de la clase
 
-- Resolver conflictos en varios archivos y con repositorio remoto.
-- Abortar una fusión y reconocer otros conflictos.
-- Controlar qué archivos se rastrean con `.gitignore`.
+- 🔹 Resolver conflictos en varios archivos y con repositorio remoto.
+- 🔹 Abortar una fusión y reconocer otros conflictos.
+- 🔹 Controlar qué archivos se rastrean con `.gitignore`.
 
-> Prerrequisitos: Clases 01 a 03.
+> 📌 Prerrequisitos: Clases 01 a 03.
 
 ---
 
-## ¿Por qué surgen los conflictos?
+## ⚠️ ¿Por qué surgen los conflictos?
 
 - Dos historias cambiaron **las mismas líneas** de un archivo.
 - O un lado modificó un archivo que el otro eliminó.
@@ -20,7 +20,7 @@
 
 ---
 
-## Identificar los conflictos
+## 🔎 Identificar los conflictos
 
 ```bash
 git status
@@ -31,7 +31,7 @@ Solo los archivos en `Unmerged paths` necesitan tu decisión.
 
 ---
 
-## Resolver bloques y archivos
+## ✍️ Resolver bloques y archivos
 
 ```text
 <<<<<<< HEAD
@@ -46,7 +46,7 @@ Sin marcadores al terminar: `git diff --check`.
 
 ---
 
-## Completar la fusión
+## ✅ Completar la fusión
 
 ```bash
 git add archivo
@@ -57,7 +57,7 @@ Un `git add` por cada archivo resuelto, y un solo commit.
 
 ---
 
-## Conflicto con remoto
+## 🌐 Conflicto con remoto
 
 ```bash
 git pull        # se detiene en conflicto
@@ -69,7 +69,7 @@ git push
 
 ---
 
-## Abortar
+## 🛑 Abortar
 
 ```bash
 git merge --abort
@@ -79,7 +79,7 @@ Vuelve al estado previo al pull. No perdés tus commits.
 
 ---
 
-## Otros conflictos y prevención
+## 🧯 Otros conflictos y prevención
 
 | Operación | Cómo seguir |
 |---|---|
@@ -90,7 +90,7 @@ Traé seguido, commits chicos, ramas cortas, hablá con el equipo.
 
 ---
 
-## ¿Qué es .gitignore?
+## 🙈 ¿Qué es .gitignore?
 
 - Archivo versionado con patrones de lo que Git **no** rastrea.
 - Se ignoran: generados, dependencias, config local, secretos.
@@ -98,7 +98,7 @@ Traé seguido, commits chicos, ramas cortas, hablá con el equipo.
 
 ---
 
-## Patrones
+## 🧩 Patrones
 
 ```text
 build/            # carpeta
@@ -109,7 +109,7 @@ build/            # carpeta
 
 ---
 
-## Dejar de rastrear
+## 🚫 Dejar de rastrear
 
 ```bash
 git rm --cached credenciales.txt
@@ -121,7 +121,7 @@ git check-ignore -v credenciales.txt
 
 ---
 
-## Archivos sensibles
+## 🔐 Archivos sensibles
 
 - Dejar de rastrear **no limpia el historial**.
 - Una credencial publicada se considera expuesta.
@@ -129,24 +129,24 @@ git check-ignore -v credenciales.txt
 
 ---
 
-## Actividad práctica
+## 🛠️ Actividad práctica
 
 Taller 01: tu `diario` con dos copias.
 
-- Crear un `.gitignore` y compartirlo.
-- Provocar, resolver y abortar un conflicto.
-- Dejar de rastrear un archivo.
+- 🔸 Crear un `.gitignore` y compartirlo.
+- 🔸 Provocar, resolver y abortar un conflicto.
+- 🔸 Dejar de rastrear un archivo.
 
 ---
 
-## Resumen
+## 📌 Resumen
 
-- Conflicto = decisión humana: propio, entrante o combinar.
+- 📍 Conflicto = decisión humana: propio, entrante o combinar.
 - `status`, editar, `diff --check`, `add`, `commit`.
 - `.gitignore` evita; `rm --cached` corrige.
 
 ---
 
-## Evaluación
+## 📝 Evaluación
 
 Quiz 01: 8 ítems sobre conflictos y `.gitignore`.

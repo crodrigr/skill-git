@@ -1,13 +1,13 @@
-# Ejemplo 01 — Clonar un repositorio
+# 📘 Ejemplo 01 — Clonar un repositorio
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Existe un repositorio remoto de ejemplo, público, provisto por el docente
 (`proyecto-ejemplo`), con dos ramas (`master` y `mejoras`). Tu máquina no tiene ninguna
 copia. En este ejemplo el remoto es un repositorio `--bare` local en lugar de GitHub
 real: Git se comporta igual.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # Preparación: integrar los cambios del remoto mediante fusión al hacer pull
@@ -32,7 +32,7 @@ cd ..
 git clone https://github.com/docente-git/proyecto-ejemplo.git mi-ejemplo
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. `git config --global pull.rebase false` fija cómo se integrarán los cambios al
    hacer `git pull` (por fusión). `git config --get pull.rebase` confirma el valor.
@@ -49,7 +49,7 @@ git clone https://github.com/docente-git/proyecto-ejemplo.git mi-ejemplo
 8. Al clonar en una carpeta que ya existe y no está vacía, Git se niega: elegí otro
    nombre o ubicación.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git config --global pull.rebase false
@@ -90,6 +90,6 @@ $ git clone https://github.com/docente-git/proyecto-ejemplo.git mi-ejemplo
 fatal: destination path 'mi-ejemplo' already exists and is not an empty directory.
 ```
 
-(Los identificadores de commit serán distintos en tu propio repositorio. Con un remoto
-real verás además líneas de progreso como `remote: Enumerating objects...`. Si el
-repositorio usa `main` como rama principal, verás `main` donde aquí aparece `master`.)
+> 💡 Los identificadores de commit serán distintos en tu propio repositorio. Con un remoto
+> real verás además líneas de progreso como `remote: Enumerating objects...`. Si el
+> repositorio usa `main` como rama principal, verás `main` donde aquí aparece `master`.

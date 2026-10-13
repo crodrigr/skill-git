@@ -1,12 +1,14 @@
-# Desafío 01 — Colaborar con dos copias: divergencia, conflicto y reversión
+# 🔴 Desafío 01 — Colaborar con dos copias: divergencia, conflicto y reversión
 
-## Estado inicial
+> 🔴 **Nivel:** Desafío · 🎓 **Resultados de aprendizaje:** RA-1, RA-2, RA-3, RA-4
+
+## 🧱 Estado inicial
 
 Las dos copias de `diario` (A tuya, B de otra persona), sincronizadas con el remoto en
 `master`. El archivo `diario.txt` tiene un título y al menos dos entradas.
 `pull.rebase` es `false`.
 
-## Proceso esperado
+## 🛠️ Proceso esperado
 
 1. **Divergencia con conflicto.** Sin sincronizar entre sí, editar **la misma línea**
    del archivo en la copia A y en la copia B, y confirmar en ambas. Publicar primero
@@ -21,28 +23,28 @@ Las dos copias de `diario` (A tuya, B de otra persona), sincronizadas con el rem
 4. Enviar la reversión y comprobar, en la copia B, que se recibe con una descarga.
 5. Mostrar el historial final de la copia B.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
-- El historial remoto contiene los commits de ambas copias, el commit de fusión del
+- ☑️ El historial remoto contiene los commits de ambas copias, el commit de fusión del
   paso 1, los dos commits del paso 2 y el commit de reversión del paso 3.
-- El archivo final, en ambas copias, no contiene ni la línea incorrecta ni su
+- ☑️ El archivo final, en ambas copias, no contiene ni la línea incorrecta ni su
   ampliación, y conserva la versión conjunta del paso 1.
-- Ningún commit se perdió y no se reescribió historial.
+- ☑️ Ningún commit se perdió y no se reescribió historial.
 
-## Restricciones
+## 🚧 Restricciones
 
-- Prohibido forzar el envío y borrar commits del historial.
-- Los mensajes de commit deben ser descriptivos.
-- Antes de continuar tras cada conflicto, comprobar el estado del repositorio.
+- 🚫 Prohibido forzar el envío y borrar commits del historial.
+- 🚫 Los mensajes de commit deben ser descriptivos.
+- 🚫 Antes de continuar tras cada conflicto, comprobar el estado del repositorio.
 
-## Resultados de aprendizaje
+## 🎓 Resultados de aprendizaje
 
 - RA-1: Clonar un proyecto desde un repositorio remoto en la máquina local.
 - RA-2: Descargar actualizaciones del repositorio remoto al repositorio local.
 - RA-3: Enviar cambios del repositorio local al repositorio remoto.
 - RA-4: Revertir cambios en el repositorio local y en el remoto.
 
-## Casos de prueba
+## 🧪 Casos de prueba
 
 | Acción | Resultado esperado |
 |---|---|

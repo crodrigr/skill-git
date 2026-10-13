@@ -1,6 +1,6 @@
-# Ejemplo 01 — Conflicto en varios archivos
+# 📘 Ejemplo 01 — Conflicto en varios archivos
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Tu copia del repositorio `diario` (Clase 03), en `master`, con cuatro archivos
 rastreados: `diario.txt`, `configuracion.txt`, `notas.txt` y `leeme.txt`. Existe una rama
@@ -13,7 +13,7 @@ rastreados: `diario.txt`, `configuracion.txt`, `notas.txt` y `leeme.txt`. Existe
 Mientras tanto, `master` también cambió la línea 2 de `diario.txt` y de
 `configuracion.txt`, y **modificó** `notas.txt`, pero no tocó `leeme.txt`.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # Fusionar la rama en master: Git se detiene con conflictos
@@ -43,7 +43,7 @@ git commit -m "Fusionar reorganizar con master"
 git log --oneline --graph
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. `git merge reorganizar` fusiona solo lo que no choca: `leeme.txt` (cambiado únicamente
    en la rama) se integra solo. Los otros tres archivos quedan en conflicto y la fusión
@@ -66,7 +66,7 @@ git log --oneline --graph
 7. `git commit` crea el commit de fusión. `git log --graph` muestra las dos líneas que se
    juntan.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git merge reorganizar
@@ -135,5 +135,5 @@ $ git log --oneline --graph
 * e5db1f0 Crear diario, configuracion y notas
 ```
 
-(Los identificadores de commit serán distintos en tu repositorio. En el `git status`
-completo se omitieron algunas líneas de ayuda que no cambian el significado.)
+> 💡 Los identificadores de commit serán distintos en tu repositorio. En el `git status`
+> completo se omitieron algunas líneas de ayuda que no cambian el significado.

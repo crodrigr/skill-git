@@ -1,12 +1,12 @@
-# Ejemplo 03 — Conflicto al hacer pull, publicar y abortar
+# 📘 Ejemplo 03 — Conflicto al hacer pull, publicar y abortar
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Dos copias del repositorio `diario`, sincronizadas con el remoto en `master`: tu copia
 (`diario-A`) y la de otra persona (`diario-B`). Se asume `pull.rebase false`. El remoto es
 un repositorio `--bare` local en lugar de GitHub real (Git se comporta igual).
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # "Otra persona" (copia B) cambia la línea 2 y la publica:
@@ -43,7 +43,7 @@ git merge --abort
 git status -sb
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. Ambas copias cambiaron la **misma línea** a partir del mismo commit. La copia B
    publica primero.
@@ -64,7 +64,7 @@ git status -sb
    archivo conserva tu versión y no se pierde nada. Después podés pensar el cambio y volver
    a hacer `git pull` cuando quieras.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git push
@@ -117,7 +117,7 @@ $ git status -sb
 ## master...origin/master [ahead 1, behind 1]
 ```
 
-(Los identificadores serán distintos en tu repositorio. En el rechazo del `push` se
-omitieron las líneas de ayuda `hint:` que ya conocés de la Clase 03. Tras abortar, el
-archivo `diario.txt` contiene otra vez tu versión y `ahead 1, behind 1` indica que
-seguís con un commit propio que aún no se integró.)
+> 💡 Los identificadores serán distintos en tu repositorio. En el rechazo del `push` se
+> omitieron las líneas de ayuda `hint:` que ya conocés de la Clase 03. Tras abortar, el
+> archivo `diario.txt` contiene otra vez tu versión y `ahead 1, behind 1` indica que
+> seguís con un commit propio que aún no se integró.

@@ -1,10 +1,10 @@
-# Ejemplo 02 — Repositorio, staging y commit
+# 📘 Ejemplo 02 — Repositorio, staging y commit
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Una carpeta vacía `mi-proyecto/`, con Git ya instalado y configurado (Ejemplo 01).
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 cd mi-proyecto
@@ -33,7 +33,7 @@ git commit -m "Agregar script inicial de la aplicacion"
 git log --oneline
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. `git init` crea el repositorio (una carpeta oculta `.git/`) en `mi-proyecto/`.
 2. El primer `git status`, antes de crear ningún archivo, muestra "No commits yet" y
@@ -49,7 +49,7 @@ git log --oneline
 7. `git log --oneline` muestra ambos commits, del más reciente al más antiguo, cada
    uno con un identificador corto y su mensaje.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git status
@@ -87,6 +87,6 @@ $ git log --oneline
 df7472d Agregar README inicial
 ```
 
-(Los identificadores de commit, por ejemplo `984b9cf`, son únicos para cada repositorio
-y van a ser distintos en tu propia computadora; lo importante es que aparezcan dos
-commits, en ese orden, con esos mensajes.)
+> 💡 Los identificadores de commit, por ejemplo `984b9cf`, son únicos para cada repositorio
+> y van a ser distintos en tu propia computadora; lo importante es que aparezcan dos
+> commits, en ese orden, con esos mensajes.

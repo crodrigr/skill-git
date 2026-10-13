@@ -1,12 +1,12 @@
-# Ejemplo 04 — Repositorio remoto y conexión
+# 📘 Ejemplo 04 — Repositorio remoto y conexión
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Un repositorio local con al menos un commit (por ejemplo, el del Ejemplo 02 de la
 Clase 01). Una cuenta de GitHub, con un repositorio nuevo ya creado desde su interfaz
 web (sin inicializarlo con README, para evitar historiales que no coinciden).
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # En la practica/validacion de este material, el "remoto" es un repositorio
@@ -28,7 +28,7 @@ git remote add origin https://github.com/tu-usuario/tu-proyecto.git
 git remote -v
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. `git init --bare ../remoto-practica.git` crea un repositorio sin carpeta de
    trabajo: es el equivalente, para practicar, de lo que GitHub aloja del otro lado
@@ -42,7 +42,7 @@ git remote -v
    GitHub, y usarías la URL que GitHub te da (`https://github.com/...` o
    `git@github.com:...`) en el `git remote add`.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git init --bare ../remoto-practica.git
@@ -54,5 +54,5 @@ origin  ../remoto-practica.git (fetch)
 origin  ../remoto-practica.git (push)
 ```
 
-(Si usás una URL real de GitHub en vez de una ruta local, `git remote -v` muestra esa
-URL en lugar de la ruta; el resto se comporta igual.)
+> 💡 Si usás una URL real de GitHub en vez de una ruta local, `git remote -v` muestra esa
+> URL en lugar de la ruta; el resto se comporta igual.

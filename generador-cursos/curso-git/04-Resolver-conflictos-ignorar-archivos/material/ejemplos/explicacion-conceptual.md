@@ -1,4 +1,4 @@
-# Explicación conceptual — Resolver conflictos e ignorar archivos
+# 📚 Explicación conceptual — Resolver conflictos e ignorar archivos
 
 Esta explicación asume que ya cursaste las Clases 01 a 03: flujo local, ramas y fusión,
 un conflicto simple (Clase 02), y clonar, pull, push y revert (Clase 03). No se repite
@@ -13,18 +13,18 @@ Resultados de aprendizaje de la clase:
 
 ---
 
-## Conflictos: causas e identificación
+## ⚠️ Conflictos: causas e identificación
 
 _Resultados de aprendizaje: RA-1_
 
-### Contexto
+### 🌍 Contexto
 
 En la Clase 02 resolviste un conflicto de una sola línea entre dos ramas. En un proyecto
 real los conflictos son más variados: varios archivos a la vez, varios bloques en un
 mismo archivo, y también aparecen al hacer pull. Lo importante es leerlos con calma y
 saber qué te está pidiendo Git.
 
-### Concepto
+### 💡 Concepto
 
 Un **conflicto** aparece cuando Git no puede combinar automáticamente los cambios de dos
 historias. Hay dos tipos frecuentes:
@@ -37,7 +37,7 @@ historias. Hay dos tipos frecuentes:
 Git fusiona solo todo lo que no choca: los archivos y las líneas que cambió un único
 lado se integran sin pedirte nada. Un conflicto es la excepción, no la regla.
 
-### Explicación
+### 📖 Explicación
 
 Los **marcadores** que Git escribe dentro del archivo ya los conocés:
 
@@ -62,16 +62,16 @@ aparecen bajo `Changes to be committed` ya se fusionaron solos.
 
 ---
 
-## Resolver conflictos
+## ✍️ Resolver conflictos
 
 _Resultados de aprendizaje: RA-1_
 
-### Contexto
+### 🌍 Contexto
 
 Con los archivos en conflicto identificados, falta decidir qué contenido queda y dejar la
 fusión completa, en local y, si corresponde, en el remoto.
 
-### Concepto
+### 💡 Concepto
 
 Resolver es una decisión explícita sobre el contenido final, **bloque por bloque**. Para
 cada bloque entre marcadores tenés tres opciones:
@@ -85,7 +85,7 @@ cada bloque entre marcadores tenés tres opciones:
 Un archivo puede tener varios bloques y cada uno admite una decisión distinta. Terminada
 la edición, el archivo **no debe contener ningún marcador**.
 
-### Explicación
+### 📖 Explicación
 
 El ciclo completo, para cualquier cantidad de archivos:
 
@@ -110,16 +110,16 @@ perder tus commits.
 
 ---
 
-## Otros conflictos y prevención
+## 🧯 Otros conflictos y prevención
 
 _Resultados de aprendizaje: RA-1_
 
-### Contexto
+### 🌍 Contexto
 
 Las fusiones y los pulls no son las únicas operaciones que pueden terminar en conflicto.
 Reconocer el patrón te permite resolverlos con la misma calma.
 
-### Concepto
+### 💡 Concepto
 
 Cualquier operación que **aplica cambios sobre un estado distinto** puede chocar:
 
@@ -129,7 +129,7 @@ Cualquier operación que **aplica cambios sobre un estado distinto** puede choca
 | `git revert` | Commits posteriores modificaron las mismas líneas | Resolver y `git revert --continue` |
 | `git merge` / `git pull` | Ya visto | Resolver y confirmar |
 
-### Explicación
+### 📖 Explicación
 
 **Con `stash pop`**, Git deja el conflicto en el archivo, avisa `The stash entry is kept
 in case you need it again` y no borra el stash. Cuando termines de resolver (`git add`),
@@ -151,17 +151,17 @@ igual, y es lo que ves en cualquier terminal.
 
 ---
 
-## Ignorar archivos con .gitignore
+## 🙈 Ignorar archivos con .gitignore
 
 _Resultados de aprendizaje: RA-2_
 
-### Contexto
+### 🌍 Contexto
 
 No todo lo que hay en la carpeta de un proyecto debe versionarse: salidas generadas,
 dependencias, configuración personal y, sobre todo, secretos. Versionar lo que no
 corresponde ensucia el historial y puede exponer información sensible.
 
-### Concepto
+### 💡 Concepto
 
 El archivo **`.gitignore`** contiene patrones que le indican a Git qué archivos **no
 rastrear**. Se versiona como cualquier otro archivo, así que todo el equipo comparte las
@@ -177,7 +177,7 @@ mismas reglas.
 Un punto clave: **ignorar solo afecta a los archivos que Git todavía no rastrea.** Si un
 archivo ya se había confirmado, agregarlo al `.gitignore` no lo deja de rastrear.
 
-### Explicación
+### 📖 Explicación
 
 **Sintaxis de patrones** (una por línea):
 

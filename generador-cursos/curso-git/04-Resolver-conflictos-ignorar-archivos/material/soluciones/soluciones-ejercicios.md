@@ -1,4 +1,4 @@
-# Soluciones — Ejercicios de la Clase 04 (material docente)
+# 🔑 Soluciones — Ejercicios de la Clase 04 (material docente)
 
 No compartir este archivo con los estudiantes.
 
@@ -15,7 +15,7 @@ de sembrarlos).
 
 ---
 
-## Preparación común (docente)
+## 🧰 Preparación común (docente)
 
 Estado inicial de los ejercicios con remoto: el repositorio `diario` y dos copias (A
 tuya, B de otra persona), con `diario.txt`, `configuracion.txt`, `notas.txt` y `leeme.txt`.
@@ -35,9 +35,9 @@ git clone -q https://github.com/tu-usuario/diario.git diario-B
 
 ---
 
-## Básico 01 — Resolver un conflicto en dos archivos
+## 🟢 Básico 01 — Resolver un conflicto en dos archivos
 
-### Preparación del ejercicio
+### 🧰 Preparación del ejercicio
 
 ```bash
 cd diario-A
@@ -51,7 +51,7 @@ sed -i '2s/.*/tema=azul/' configuracion.txt
 git commit -qam "Ajustar diario y configuracion en master"
 ```
 
-### Comandos
+### 💻 Comandos
 
 ```bash
 git merge ajustes
@@ -67,7 +67,7 @@ git status -s
 git log --oneline --graph
 ```
 
-### Explicación
+### 📖 Explicación
 
 La fusión se detiene con dos conflictos de contenido. `git status -s` los marca `UU`; como
 no hay archivos en `Changes to be committed`, no se fusionó nada solo. En `diario.txt`
@@ -75,7 +75,7 @@ se combinan ambos lados y en `configuracion.txt` se queda el lado entrante. El `
 `git diff --check` sin salida confirman que no quedan marcadores. `git add` marca la
 resolución y `git commit` completa la fusión.
 
-### Resultado esperado
+### ✅ Resultado esperado
 
 ```console
 $ git status -s
@@ -93,15 +93,15 @@ $ git log --oneline --graph
 * <id> Crear diario y configuracion
 ```
 
-### Verificación
+### 🔎 Verificación
 
 Sin marcadores en ambos archivos, `git status` limpio, commit de fusión con dos padres.
 
 ---
 
-## Básico 02 — Crear un .gitignore
+## 🟢 Básico 02 — Crear un .gitignore
 
-### Preparación del ejercicio
+### 🧰 Preparación del ejercicio
 
 ```bash
 mkdir -p proyecto-gitignore/{src,build,dependencias}
@@ -116,7 +116,7 @@ echo "libreria de ejemplo" > dependencias/libreria.txt
 printf 'usuario=demo\nclave=NO-REAL-12345\n' > credenciales.txt
 ```
 
-### Comandos
+### 💻 Comandos
 
 ```bash
 git status -s
@@ -140,14 +140,14 @@ git commit -m "Crear proyecto con .gitignore"
 git ls-files
 ```
 
-### Explicación
+### 📖 Explicación
 
 `build/` ignora la carpeta; `*.log` ignora por comodín y `!auditoria.log` es la excepción,
 que debe ir **después**; `dependencias/` ignora la carpeta; `credenciales.txt` ignora por
 nombre exacto. Tras crear el archivo, solo quedan `.gitignore`, `README.md`,
 `auditoria.log` y `src/` como no rastreados.
 
-### Resultado esperado
+### ✅ Resultado esperado
 
 ```console
 $ git status -s
@@ -162,16 +162,16 @@ auditoria.log
 src/programa.txt
 ```
 
-### Verificación
+### 🔎 Verificación
 
 `git ls-files` no incluye `build/`, `dependencias/`, `registro.log`, `depuracion.log` ni
 `credenciales.txt`; sí incluye `auditoria.log`.
 
 ---
 
-## Intermedio 01 — Conflicto al hacer pull: resolver, publicar y abortar
+## 🟡 Intermedio 01 — Conflicto al hacer pull: resolver, publicar y abortar
 
-### Comandos
+### 💻 Comandos
 
 ```bash
 # 1. Conflicto: misma línea en B y en A
@@ -218,7 +218,7 @@ cat diario.txt
 git log --oneline | head -3
 ```
 
-### Explicación
+### 📖 Explicación
 
 Ambas copias cambiaron la misma línea desde el mismo commit, así que el push de A es
 rechazado y el pull termina en conflicto (`ahead 1, behind 1` indica un commit propio sin
@@ -226,7 +226,7 @@ publicar y uno remoto sin traer). Se resuelve combinando, se comprueba con `grep
 `git diff --check`, y se publica. En el segundo conflicto, `git merge --abort` devuelve
 el repositorio al estado previo al pull, con el commit propio intacto y sin marcadores.
 
-### Resultado esperado
+### ✅ Resultado esperado
 
 ```console
 $ git push
@@ -248,7 +248,7 @@ Entrada 2: cree mi rama
 Entrada 3: aprendi a clonar
 ```
 
-### Verificación
+### 🔎 Verificación
 
 Tras el paso 4, el remoto contiene los commits de A y B y el de fusión. Tras el paso 6,
 no hay fusión en curso, `diario.txt` conserva la versión de A y el commit sigue en el
@@ -256,9 +256,9 @@ historial.
 
 ---
 
-## Intermedio 02 — Dejar de rastrear un archivo y averiguar qué regla lo ignora
+## 🟡 Intermedio 02 — Dejar de rastrear un archivo y averiguar qué regla lo ignora
 
-### Preparación del ejercicio
+### 🧰 Preparación del ejercicio
 
 ```bash
 mkdir -p proyecto-gitignore/{src,build,dependencias}
@@ -272,7 +272,7 @@ git add . && git commit -qm "Primer commit (se rastreo todo por descuido)"
 echo "depuracion" > depuracion.log
 ```
 
-### Comandos
+### 💻 Comandos
 
 ```bash
 printf '# Archivos generados\nbuild/\n*.log\n\n# Secretos (credenciales NO REAL)\ncredenciales.txt\n' > .gitignore
@@ -288,7 +288,7 @@ git ls-files
 git check-ignore -v credenciales.txt depuracion.log
 ```
 
-### Explicación
+### 📖 Explicación
 
 Aunque `credenciales.txt` está en el `.gitignore`, ya estaba rastreado, por eso Git lo ve
 cambiar (`M` en la segunda columna) y `git check-ignore` no responde. `git rm --cached` lo saca del índice sin
@@ -300,7 +300,7 @@ rastrearlo no borra sus versiones anteriores del historial remoto; habría que c
 la credencial comprometida y reemplazarla (generar una nueva y revocar la anterior). Limpiar
 el historial queda fuera de la clase.
 
-### Resultado esperado
+### ✅ Resultado esperado
 
 ```console
 $ git status -s
@@ -319,16 +319,16 @@ $ git check-ignore -v credenciales.txt depuracion.log
 .gitignore:3:*.log      depuracion.log
 ```
 
-### Verificación
+### 🔎 Verificación
 
 `git status` limpio, los archivos siguen en el disco, la lista de rastreados no incluye
 los ignorados, y `check-ignore` identifica el archivo, la línea y el patrón.
 
 ---
 
-## Desafío 01 — Conflictos y archivos ignorados en un mismo proyecto
+## 🔴 Desafío 01 — Conflictos y archivos ignorados en un mismo proyecto
 
-### Preparación del ejercicio
+### 🧰 Preparación del ejercicio
 
 ```bash
 cd diario-A
@@ -341,7 +341,7 @@ echo "registro" > registro.log
 cd ../diario-A && echo "registro" > registro.log
 ```
 
-### Comandos
+### 💻 Comandos
 
 ```bash
 # 1. Conflicto en pull
@@ -393,7 +393,7 @@ git check-ignore -v registro.log
 git log --oneline -- credenciales.txt
 ```
 
-### Explicación
+### 📖 Explicación
 
 **Paso 1.** Conflicto de contenido en el pull, resuelto combinando; `git diff --check` sin
 salida antes de completar. **Paso 2.** El segundo commit modificó la misma línea que el
@@ -405,7 +405,7 @@ el archivo sigue en el disco. **Paso 4.** B recibe el `.gitignore` y su estado q
 historial: dejar de rastrear no lo borra, y de ser real la credencial habría que
 reemplazarla y revocar la anterior.
 
-### Resultado esperado
+### ✅ Resultado esperado
 
 ```console
 $ git pull
@@ -429,7 +429,7 @@ $ git log --oneline -- credenciales.txt
 <id> Agregar credenciales de ejemplo (NO REAL) por descuido
 ```
 
-### Verificación
+### 🔎 Verificación
 
 Se cumplen los casos de prueba del Desafío: conflicto en el pull, `git diff --check` sin
 avisos, conflicto al revertir (`UU`), `credenciales.txt` fuera de `git ls-files` pero

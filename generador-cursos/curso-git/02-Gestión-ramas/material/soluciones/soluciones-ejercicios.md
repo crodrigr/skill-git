@@ -1,10 +1,10 @@
-# Soluciones — Ejercicios (material docente)
+# 🔑 Soluciones — Ejercicios (material docente)
 
 No compartir este archivo con los estudiantes.
 
 ---
 
-## Básico 01 — Gestión básica de ramas
+## 🟢 Básico 01 — Gestión básica de ramas
 
 ```bash
 git branch
@@ -28,7 +28,7 @@ después, sí. `git branch -d mi-rama` se completa sin advertencias.
 
 ---
 
-## Básico 02 — Fusión sin conflicto
+## 🟢 Básico 02 — Fusión sin conflicto
 
 ```bash
 git switch -c rama-a
@@ -51,7 +51,7 @@ ls
 
 ---
 
-## Intermedio 01 — Resolver un conflicto de fusión
+## 🟡 Intermedio 01 — Resolver un conflicto de fusión
 
 ```bash
 git switch -c rama-conflicto
@@ -86,7 +86,7 @@ marcadores.
 
 ---
 
-## Intermedio 02 — Crear un repositorio remoto y conectarlo
+## 🟡 Intermedio 02 — Crear un repositorio remoto y conectarlo
 
 ```bash
 # Remoto de practica (equivalente a crear un repositorio en GitHub):
@@ -101,7 +101,7 @@ para `fetch` como para `push`.
 
 ---
 
-## Desafío 01 — Ciclo completo: rama, merge y remoto
+## 🔴 Desafío 01 — Ciclo completo: rama, merge y remoto
 
 ```bash
 # 1. Rama, trabajo y merge

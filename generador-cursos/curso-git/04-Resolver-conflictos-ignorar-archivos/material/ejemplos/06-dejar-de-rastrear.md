@@ -1,13 +1,13 @@
-# Ejemplo 06 — Dejar de rastrear un archivo y averiguar por qué se ignora
+# 📘 Ejemplo 06 — Dejar de rastrear un archivo y averiguar por qué se ignora
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Un repositorio de práctica `proyecto-gitignore` donde, por descuido, ya se confirmó todo
 en el primer commit: `README.md`, `src/programa.txt`, `build/salida.txt`, `registro.log`
 y `credenciales.txt` (contenido ficticio y **NO REAL**: `clave=NO-REAL-12345`). Recién
 después se crea un `.gitignore`.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # Crear el .gitignore (tarde: los archivos ya estaban rastreados)
@@ -47,7 +47,7 @@ git status -s
 git check-ignore -v notas-personales.txt
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. Aunque `credenciales.txt` está en el `.gitignore`, ya estaba **rastreado**. Al
    modificarlo, `git status -s` muestra `M` en la segunda columna para `credenciales.txt`: el `.gitignore` solo
@@ -72,7 +72,7 @@ git check-ignore -v notas-personales.txt
 borra sus versiones anteriores del historial: se considerarían comprometidas y habría que
 reemplazarlas. Eso se explica en la clase, pero no se practica.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git status -s
@@ -136,6 +136,6 @@ $ git check-ignore -v notas-personales.txt
 .git/info/exclude:7:notas-personales.txt        notas-personales.txt
 ```
 
-(En `git commit` se omite la línea `delete mode` de `registro.log` por brevedad. El número
-de línea de `.git/info/exclude` depende del contenido del archivo en tu repositorio. En
-las salidas reales de `check-ignore`, una tabulación separa la regla del archivo.)
+> 💡 En `git commit` se omite la línea `delete mode` de `registro.log` por brevedad. El número
+> de línea de `.git/info/exclude` depende del contenido del archivo en tu repositorio. En
+> las salidas reales de `check-ignore`, una tabulación separa la regla del archivo.

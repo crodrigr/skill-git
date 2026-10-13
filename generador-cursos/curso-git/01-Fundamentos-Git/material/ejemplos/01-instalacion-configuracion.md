@@ -1,11 +1,11 @@
-# Ejemplo 01 — Instalación y configuración de Git
+# 📘 Ejemplo 01 — Instalación y configuración de Git
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Una computadora con Linux (los mismos comandos finales aplican, cambiando solo el paso
 de instalación, en Windows y macOS — ver la Explicación conceptual) sin Git instalado.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # 1. Instalar Git (Debian/Ubuntu)
@@ -23,7 +23,7 @@ git config --global user.email "ada@ejemplo.com"
 git config --list
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. `sudo apt install git` descarga e instala el programa `git` desde los repositorios
    del sistema. En Windows se usa el instalador de "Git for Windows"; en macOS,
@@ -37,7 +37,7 @@ git config --list
 4. `git config --list` imprime toda la configuración activa, incluidas las dos líneas
    que acabamos de definir, para confirmar que quedaron guardadas correctamente.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git --version
@@ -48,5 +48,5 @@ user.name=Ada Lovelace
 user.email=ada@ejemplo.com
 ```
 
-(La versión exacta de Git puede variar; cualquier versión 2.x reciente sirve para toda
-la clase.)
+> 💡 La versión exacta de Git puede variar; cualquier versión 2.x reciente sirve para toda
+> la clase.

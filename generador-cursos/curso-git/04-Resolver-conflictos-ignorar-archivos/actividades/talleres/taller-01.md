@@ -1,16 +1,16 @@
-# Taller 01 — Conflictos y archivos ignorados en tu diario
+# 🛠️ Taller 01 — Conflictos y archivos ignorados en tu diario
 
-## Objetivo
+## 🎯 Objetivo
 
 Aplicar en un proyecto real los dos resultados de la clase: resolver conflictos con
 repositorios locales y remotos (RA-1) y controlar qué archivos se rastrean (RA-2).
 
-## Contexto
+## 🌍 Contexto
 
 Seguirás trabajando sobre el repositorio `diario` de la Clase 03 y sus dos copias locales
 en carpetas distintas (copia A y copia B), que simulan a dos personas colaborando.
 
-## Pasos
+## 🪜 Pasos
 
 1. Verificá que `pull.rebase` esté en `false` y que tu token de acceso a GitHub siga
    vigente.
@@ -28,15 +28,15 @@ en carpetas distintas (copia A y copia B), que simulan a dos personas colaborand
    confirmá y publicá.
 8. Con `git check-ignore -v`, comprobá qué regla ignora ese archivo.
 
-## Entregable
+## 📦 Entregable
 
 Tu repositorio `diario` en GitHub con un `.gitignore` versionado, una fusión con conflicto
 publicada y un archivo que dejaste de rastrear; `git status` limpio en ambas copias.
 
-## Criterios de evaluación
+## 📋 Criterios de evaluación
 
-- El conflicto se resolvió sin dejar marcadores y la fusión se publicó.
-- El aborto devolvió el repositorio al estado previo sin perder trabajo.
+- ✔️ El conflicto se resolvió sin dejar marcadores y la fusión se publicó.
+- ✔️ El aborto devolvió el repositorio al estado previo sin perder trabajo.
 - `git status` queda limpio y el archivo sensible se conserva en disco sin rastrearse.
-- Se identificó la regla que ignora el archivo.
-- Nunca se usaron credenciales reales ni se forzó un envío.
+- ✔️ Se identificó la regla que ignora el archivo.
+- ✔️ Nunca se usaron credenciales reales ni se forzó un envío.

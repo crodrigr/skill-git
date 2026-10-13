@@ -1,4 +1,4 @@
-# Soluciones — Quiz 01 (material docente)
+# 🔑 Soluciones — Quiz 01 (material docente)
 
 No compartir este archivo con los estudiantes.
 

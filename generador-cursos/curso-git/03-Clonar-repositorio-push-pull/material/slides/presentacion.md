@@ -1,18 +1,18 @@
-# Clonar un repositorio, hacer push y pull
+# 📥 Clonar un repositorio, hacer push y pull
 
 ---
 
-## Objetivos de la clase
+## 🎯 Objetivos de la clase
 
-- Clonar cualquier proyecto desde un repositorio remoto.
-- Descargar y enviar cambios con `git pull` y `git push`.
-- Revertir cambios en local y en remoto con `git revert`.
+- 🔹 Clonar cualquier proyecto desde un repositorio remoto.
+- 🔹 Descargar y enviar cambios con `git pull` y `git push`.
+- 🔹 Revertir cambios en local y en remoto con `git revert`.
 
-> Prerrequisitos: Clase 01 (flujo local) y Clase 02 (ramas y remoto).
+> 📌 Prerrequisitos: Clase 01 (flujo local) y Clase 02 (ramas y remoto).
 
 ---
 
-## Preparación
+## 🧰 Preparación
 
 ```bash
 git config --global pull.rebase false
@@ -24,7 +24,7 @@ git ls-remote https://github.com/tu-usuario/diario.git
 
 ---
 
-## ¿Qué es clonar?
+## 📥 ¿Qué es clonar?
 
 - Copia local **completa** de un repositorio remoto.
 - Trae archivos, historial y ramas.
@@ -32,7 +32,7 @@ git ls-remote https://github.com/tu-usuario/diario.git
 
 ---
 
-## Clonar y verificar
+## 🔍 Clonar y verificar
 
 ```bash
 git clone <url> [carpeta]
@@ -44,7 +44,7 @@ Si la carpeta existe y no está vacía, Git se niega.
 
 ---
 
-## Local y remoto: dos lugares
+## 🔁 Local y remoto: dos lugares
 
 | Comando | Dirección |
 |---|---|
@@ -55,7 +55,7 @@ Un commit es local hasta que hacés `push`.
 
 ---
 
-## Pull: descargar cambios
+## ⬇️ Pull: descargar cambios
 
 ```bash
 git pull
@@ -67,7 +67,7 @@ git pull
 
 ---
 
-## Push: enviar cambios
+## ⬆️ Push: enviar cambios
 
 ```bash
 git push
@@ -78,7 +78,7 @@ El `-u` enlaza la rama local con la remota.
 
 ---
 
-## Push rechazado
+## ⛔ Push rechazado
 
 ```console
 ! [rejected] master -> master (fetch first)
@@ -89,7 +89,7 @@ Solución: `git pull`, resolver, `git push`.
 
 ---
 
-## Ciclo de trabajo
+## 🔄 Ciclo de trabajo
 
 1. `git pull`
 2. Trabajar y confirmar
@@ -100,7 +100,7 @@ Nunca fuerces un envío para "arreglar" un rechazo.
 
 ---
 
-## ¿Qué es revertir?
+## ↩️ ¿Qué es revertir?
 
 - Crea un commit **nuevo** que deshace otro.
 - El historial no se reescribe: solo crece.
@@ -108,7 +108,7 @@ Nunca fuerces un envío para "arreglar" un rechazo.
 
 ---
 
-## Revertir y propagar
+## ↩️ Revertir y propagar
 
 ```bash
 git revert --no-edit <commit>
@@ -119,7 +119,7 @@ Las demás personas lo reciben con `git pull`.
 
 ---
 
-## Autenticación: si falla
+## 🔑 Autenticación: si falla
 
 | Mensaje | Causa |
 |---|---|
@@ -129,24 +129,24 @@ Las demás personas lo reciben con `git pull`.
 
 ---
 
-## Actividad práctica
+## 🛠️ Actividad práctica
 
 Taller 01: dos copias de tu `diario`.
 
-- Clonar, enviar, descargar.
-- Provocar y resolver un rechazo.
-- Revertir un commit publicado.
+- 🔸 Clonar, enviar, descargar.
+- 🔸 Provocar y resolver un rechazo.
+- 🔸 Revertir un commit publicado.
 
 ---
 
-## Resumen
+## 📌 Resumen
 
 - `clone` copia; `pull` baja; `push` sube.
-- Rechazo = primero `pull`.
+- 📍 Rechazo = primero `pull`.
 - `revert` corrige sin borrar historia.
 
 ---
 
-## Evaluación
+## 📝 Evaluación
 
 Quiz 01: 8 ítems sobre clonar, pull, push y revert.

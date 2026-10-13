@@ -1,11 +1,11 @@
-# Ejemplo 02 — Merge sin conflicto
+# 📘 Ejemplo 02 — Merge sin conflicto
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Un repositorio con un commit en `master` (`tareas.txt`). A partir de ahí, dos ramas
 que avanzan en paralelo y modifican **archivos distintos**.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 git switch -c agregar-prioridad
@@ -25,7 +25,7 @@ ls
 git log --oneline --all --graph
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. Se crea la rama `agregar-prioridad` y, en ella, un commit que agrega
    `prioridad.txt`.
@@ -41,7 +41,7 @@ git log --oneline --all --graph
 5. Después del merge, ambos archivos (`tareas.txt` y `prioridad.txt`) están presentes,
    y el historial muestra el commit de fusión uniendo las dos líneas.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git log --oneline --all --graph
@@ -68,4 +68,4 @@ $ git log --oneline --all --graph
 * 9918f9d Agregar lista de tareas
 ```
 
-(Los identificadores de commit van a ser distintos en tu propio repositorio.)
+> 💡 Los identificadores de commit van a ser distintos en tu propio repositorio.

@@ -1,6 +1,6 @@
-# Ejemplo 04 — Conflicto al recuperar cambios guardados y al revertir
+# 📘 Ejemplo 04 — Conflicto al recuperar cambios guardados y al revertir
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Tu copia del repositorio `diario` (`diario-A`), sincronizada con el remoto en `master`,
 y la copia de otra persona (`diario-B`). Se asume `pull.rebase false`. El remoto es un
@@ -9,7 +9,7 @@ repositorio `--bare` local en lugar de GitHub real.
 La otra persona ya publicó un cambio en la línea 2 de `diario.txt`. Vos, sin saberlo,
 editaste esa misma línea y todavía **no la confirmaste**.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # 1. Conflicto con stash pop
@@ -47,7 +47,7 @@ git revert --continue
 git log --oneline
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. Con cambios sin confirmar en un archivo que el remoto también modificó, `git pull`
    se negaría (Clase 03). Por eso `git stash` los guarda primero y `git pull` trae lo
@@ -68,7 +68,7 @@ git log --oneline
 7. Se resuelve dejando el archivo sin la entrada, `git add` y `git revert --continue`,
    que crea el commit de reversión. Si preferís desistir: `git revert --abort`.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git status -s
@@ -145,6 +145,6 @@ f15daab Agregar entrada 4 con dato incorrecto
 e845d4c Combinar la entrada 1 de ambos lados
 ```
 
-(Los identificadores serán distintos en tu repositorio. Se omitieron las líneas de ayuda
-`hint:` y de ayuda de `git status` que no cambian el significado. Si el editor se abre al
-ejecutar `git revert --continue`, guardá y cerrá.)
+> 💡 Los identificadores serán distintos en tu repositorio. Se omitieron las líneas de ayuda
+> `hint:` y de ayuda de `git status` que no cambian el significado. Si el editor se abre al
+> ejecutar `git revert --continue`, guardá y cerrá.

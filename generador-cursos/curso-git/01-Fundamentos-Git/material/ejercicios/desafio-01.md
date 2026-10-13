@@ -1,10 +1,12 @@
-# Desafío 01 — Un repositorio de principio a fin
+# 🔴 Desafío 01 — Un repositorio de principio a fin
 
-## Estado inicial
+> 🔴 **Nivel:** Desafío · 🎓 **Resultados de aprendizaje:** RA-1, RA-4, RA-5, RA-6, RA-7
+
+## 🧱 Estado inicial
 
 Una carpeta nueva y vacía en tu computadora, con Git instalado y configurado.
 
-## Proceso esperado
+## 🛠️ Proceso esperado
 
 1. Elegir un proyecto propio simple (por ejemplo, una lista de tareas en un archivo de
    texto, o cualquier otra idea corta).
@@ -18,20 +20,20 @@ Una carpeta nueva y vacía en tu computadora, con Git instalado y configurado.
    identificar y describir, por escrito, el contenido de un commit intermedio
    específico (ni el primero ni el último).
 
-## Resultado esperado
+## ✅ Resultado esperado
 
-- Un repositorio local con al menos 4 commits, cada uno con un mensaje descriptivo
+- ☑️ Un repositorio local con al menos 4 commits, cada uno con un mensaje descriptivo
   distinto.
-- Un `README.md` presente y confirmado en el historial.
-- Una descripción escrita, correcta, de qué cambió en un commit intermedio elegido.
+- ☑️ Un `README.md` presente y confirmado en el historial.
+- ☑️ Una descripción escrita, correcta, de qué cambió en un commit intermedio elegido.
 
-## Restricciones
+## 🚧 Restricciones
 
-- No se permite un único commit gigante al final: los commits deben reflejar el avance
+- 🚫 No se permite un único commit gigante al final: los commits deben reflejar el avance
   real del trabajo.
-- Ningún mensaje de commit puede ser genérico ("cambios", "update", "final").
+- 🚫 Ningún mensaje de commit puede ser genérico ("cambios", "update", "final").
 
-## Resultados de aprendizaje
+## 🎓 Resultados de aprendizaje
 
 - RA-1: Comprender qué es el control de versiones y por qué es importante.
 - RA-4: Crear repositorios locales.
@@ -39,7 +41,7 @@ Una carpeta nueva y vacía en tu computadora, con Git instalado y configurado.
 - RA-6: Crear y manejar commits, y navegar entre ellos.
 - RA-7: Crear y redactar un archivo README.md.
 
-## Casos de prueba
+## 🧪 Casos de prueba
 
 | Acción | Resultado esperado |
 |---|---|

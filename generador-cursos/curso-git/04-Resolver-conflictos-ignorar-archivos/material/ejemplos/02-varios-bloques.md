@@ -1,12 +1,12 @@
-# Ejemplo 02 — Varios bloques de conflicto en un archivo
+# 📘 Ejemplo 02 — Varios bloques de conflicto en un archivo
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Un archivo `lista.txt` de 14 líneas (título y trece tareas), confirmado en `master`. La
 rama `cambios-lista` y `master` modificaron, cada una por su cuenta, las líneas de la
 tarea 1, la tarea 7 y la tarea 13. Estás parado en `master`.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # Fusionar: conflicto con tres bloques en el mismo archivo
@@ -36,7 +36,7 @@ git add lista.txt
 git commit -m "Fusionar cambios-lista"
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. Como las tres modificaciones están separadas por varias líneas sin tocar, Git las trata
    como **tres bloques independientes** dentro del mismo archivo: cada uno tiene su propio
@@ -54,7 +54,7 @@ git commit -m "Fusionar cambios-lista"
    termina sin avisos: el archivo está limpio.
 6. `git add lista.txt` lo marca como resuelto y `git commit` completa la fusión.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git merge cambios-lista
@@ -119,5 +119,5 @@ $ git commit -m "Fusionar cambios-lista"
 [master 54455cc] Fusionar cambios-lista
 ```
 
-(Los identificadores serán distintos en tu repositorio. Los comandos `grep` y
-`git diff --check` sin salida indican que no quedan marcadores.)
+> 💡 Los identificadores serán distintos en tu repositorio. Los comandos `grep` y
+> `git diff --check` sin salida indican que no quedan marcadores.

@@ -1,19 +1,19 @@
-# Gestión de Ramas
+# 🌿 Gestión de Ramas
 
 ---
 
-## Objetivos de la clase
+## 🎯 Objetivos de la clase
 
-- Entender qué es una rama y para qué se usa.
-- Crear, cambiar y eliminar ramas correctamente.
-- Fusionar ramas y resolver un conflicto simple.
-- Crear un repositorio remoto y trabajar en conjunto local/remoto.
+- 🔹 Entender qué es una rama y para qué se usa.
+- 🔹 Crear, cambiar y eliminar ramas correctamente.
+- 🔹 Fusionar ramas y resolver un conflicto simple.
+- 🔹 Crear un repositorio remoto y trabajar en conjunto local/remoto.
 
-> Prerrequisito: Clase 01 — Fundamentos Git (repositorio local, staging, commits).
+> 📌 Prerrequisito: Clase 01 — Fundamentos Git (repositorio local, staging, commits).
 
 ---
 
-## ¿Qué es una rama?
+## 🌿 ¿Qué es una rama?
 
 - Línea de desarrollo paralela dentro del mismo repositorio.
 - Aísla cambios sin afectar la rama principal (`master`/`main`).
@@ -21,7 +21,7 @@
 
 ---
 
-## Crear, cambiar y eliminar ramas
+## 🔀 Crear, cambiar y eliminar ramas
 
 ```bash
 git branch                 # listar ramas
@@ -32,7 +32,7 @@ git branch -D mi-rama       # eliminar forzada
 
 ---
 
-## Merge y conflictos
+## 🔗 Merge y conflictos
 
 ```bash
 git merge mi-rama -m "Mensaje de la fusion"
@@ -44,7 +44,7 @@ git merge mi-rama -m "Mensaje de la fusion"
 
 ---
 
-## ¿Qué es un repositorio remoto?
+## 🌐 ¿Qué es un repositorio remoto?
 
 - Copia de tu repositorio alojada en otro lugar (GitHub).
 - Permite respaldar y compartir el historial del proyecto.
@@ -52,19 +52,19 @@ git merge mi-rama -m "Mensaje de la fusion"
 
 ---
 
-## Conexión local-remoto
+## 🔌 Conexión local-remoto
 
 ```bash
 git remote add origin https://github.com/usuario/proyecto.git
 git remote -v
 ```
 
-> En esta clase, para practicar sin cuenta ni internet, usamos un repositorio
+> 💡 En esta clase, para practicar sin cuenta ni internet, usamos un repositorio
 > `--bare` local como remoto: a Git le da igual, el comportamiento es el mismo.
 
 ---
 
-## Publicar y traer cambios
+## 📤 Publicar y traer cambios
 
 ```bash
 git push -u origin master   # publicar (primera vez)
@@ -75,7 +75,7 @@ git pull origin master       # traer y combinar
 
 ---
 
-## Flujo de trabajo conjunto
+## 🔄 Flujo de trabajo conjunto
 
 1. Antes de empezar a trabajar: `git pull`.
 2. Trabajar en una rama, commitear seguido.
@@ -84,7 +84,7 @@ git pull origin master       # traer y combinar
 
 ---
 
-## Actividad práctica
+## 🛠️ Actividad práctica
 
 **Taller 01**: en tu propio proyecto —
 
@@ -95,16 +95,16 @@ git pull origin master       # traer y combinar
 
 ---
 
-## Resumen
+## 📌 Resumen
 
-- Rama: línea de desarrollo paralela; `branch`/`switch -c`/`merge`/`branch -d`.
-- Conflicto: marcadores `<<<<<<<`/`=======`/`>>>>>>>`, resolución manual.
-- Remoto: copia del repositorio en GitHub; `remote add`, `push`, `pull`.
-- Push rechazado por divergencia → `pull` primero, resolver si hay conflicto.
-- Lo que sigue (módulo posterior): *pull requests* y colaboración en equipo.
+- 📍 Rama: línea de desarrollo paralela; `branch`/`switch -c`/`merge`/`branch -d`.
+- 📍 Conflicto: marcadores `<<<<<<<`/`=======`/`>>>>>>>`, resolución manual.
+- 📍 Remoto: copia del repositorio en GitHub; `remote add`, `push`, `pull`.
+- 📍 Push rechazado por divergencia → `pull` primero, resolver si hay conflicto.
+- 📍 Lo que sigue (módulo posterior): *pull requests* y colaboración en equipo.
 
 ---
 
-## Evaluación
+## 📝 Evaluación
 
 Quiz de 8 preguntas sobre ramas, merge, conflictos y repositorios remotos.

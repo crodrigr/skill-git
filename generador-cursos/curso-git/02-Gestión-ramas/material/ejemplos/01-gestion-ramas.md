@@ -1,11 +1,11 @@
-# Ejemplo 01 — Gestión básica de ramas
+# 📘 Ejemplo 01 — Gestión básica de ramas
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Un repositorio local con un commit en la rama principal (`master`), con un archivo
 `notas.txt`.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 git branch
@@ -27,7 +27,7 @@ git branch -d funcionalidad-nueva
 git branch
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. `git branch` (sin argumentos) lista las ramas existentes; al principio solo
    existe `master`, marcada con `*` porque es donde estás parado.
@@ -43,7 +43,7 @@ git branch
 6. `git branch -d funcionalidad-nueva` elimina la rama sin advertencias, porque ya
    está completamente fusionada: no hay riesgo de perder commits.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git branch
@@ -79,4 +79,4 @@ $ git branch
 * master
 ```
 
-(Los identificadores de commit van a ser distintos en tu propio repositorio.)
+> 💡 Los identificadores de commit van a ser distintos en tu propio repositorio.

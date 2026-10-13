@@ -1,10 +1,10 @@
-# Soluciones — Ejercicios (material docente)
+# 🔑 Soluciones — Ejercicios (material docente)
 
 No compartir este archivo con los estudiantes.
 
 ---
 
-## Básico 01 — Instalar y configurar Git
+## 🟢 Básico 01 — Instalar y configurar Git
 
 ```bash
 git --version
@@ -25,7 +25,7 @@ valores configurados.
 
 ---
 
-## Básico 02 — Explicar el control de versiones
+## 🟢 Básico 02 — Explicar el control de versiones
 
 **Respuesta de referencia** (la respuesta del estudiante puede variar en redacción y
 ejemplo, siempre que cubra estas tres ideas):
@@ -43,7 +43,7 @@ exigir la misma redacción que el material.
 
 ---
 
-## Intermedio 01 — Flujo local completo
+## 🟡 Intermedio 01 — Flujo local completo
 
 ```bash
 mkdir mi-ejercicio && cd mi-ejercicio
@@ -71,7 +71,7 @@ git status
 
 ---
 
-## Intermedio 02 — Navegación del historial
+## 🟡 Intermedio 02 — Navegación del historial
 
 ```bash
 git log
@@ -89,7 +89,7 @@ archivo y el contenido que realmente aparece en la salida de `git show`.
 
 ---
 
-## Desafío 01 — Un repositorio de principio a fin
+## 🔴 Desafío 01 — Un repositorio de principio a fin
 
 ```bash
 mkdir mi-desafio && cd mi-desafio

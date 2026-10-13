@@ -1,11 +1,11 @@
-# Ejemplo 03 — Merge con conflicto
+# 📘 Ejemplo 03 — Merge con conflicto
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Un repositorio con un commit en `master` (`README.md`). Dos ramas que, a partir de
 ahí, modifican **la misma línea** de ese archivo de formas distintas.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 git switch -c actualizar-bienvenida
@@ -32,7 +32,7 @@ git log --oneline --graph --all
 cat README.md
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. Ambas ramas modifican la misma línea de `README.md`, cada una con un contenido
    distinto: esto es exactamente lo que provoca un conflicto.
@@ -50,7 +50,7 @@ cat README.md
 6. `git commit` (sin `-m` hace falta, pero se puede dar uno propio) completa el
    commit de fusión. El historial muestra las dos ramas uniéndose en ese commit.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git merge actualizar-bienvenida
@@ -101,4 +101,4 @@ $ cat README.md
 Bienvenido a nuestro mejor proyecto de equipo
 ```
 
-(Los identificadores de commit van a ser distintos en tu propio repositorio.)
+> 💡 Los identificadores de commit van a ser distintos en tu propio repositorio.

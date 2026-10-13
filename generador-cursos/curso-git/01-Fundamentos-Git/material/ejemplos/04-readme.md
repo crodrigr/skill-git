@@ -1,11 +1,11 @@
-# Ejemplo 04 — Crear y confirmar un README.md
+# 📘 Ejemplo 04 — Crear y confirmar un README.md
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Un repositorio local ya inicializado, sin `README.md` todavía (por ejemplo, el
 repositorio del Ejemplo 02).
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 cat > README.md <<'EOF'
@@ -26,7 +26,7 @@ git log --oneline
 git show --stat HEAD
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. Se crea `README.md` en la raíz del repositorio con un título, una descripción breve
    del proyecto y una sección de uso. El contenido exacto varía según el proyecto; lo
@@ -40,7 +40,7 @@ git show --stat HEAD
 5. `git log --oneline` y `git show --stat HEAD` confirman que el commit quedó
    registrado y qué archivo incluyó.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git status
@@ -74,4 +74,4 @@ Date:   Wed Oct 7 16:11:57 2026 -0500
  1 file changed, 7 insertions(+)
 ```
 
-(El identificador del commit, `7bc97a3`, va a ser distinto en tu propio repositorio.)
+> 💡 El identificador del commit, `7bc97a3`, va a ser distinto en tu propio repositorio.

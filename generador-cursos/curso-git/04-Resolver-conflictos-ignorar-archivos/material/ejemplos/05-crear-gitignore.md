@@ -1,6 +1,6 @@
-# Ejemplo 05 — Crear un .gitignore con distintos patrones
+# 📘 Ejemplo 05 — Crear un .gitignore con distintos patrones
 
-## Estado inicial
+## 🧱 Estado inicial
 
 Una carpeta de práctica `proyecto-gitignore`, con un repositorio recién iniciado (`git
 init`) y estos archivos, ninguno confirmado todavía:
@@ -21,7 +21,7 @@ src/docs/borrador.txt  # otro borrador, en una subcarpeta
 El contenido de `credenciales.txt` es ficticio (`clave=NO-REAL-12345`): en este curso
 nunca se usan credenciales reales.
 
-## Comandos
+## 💻 Comandos
 
 ```bash
 # Antes: todo aparece como no rastreado
@@ -56,7 +56,7 @@ git commit -m "Crear proyecto con .gitignore"
 git ls-files
 ```
 
-## Explicación paso a paso
+## 🔍 Explicación paso a paso
 
 1. `git status -s` antes de crear el archivo muestra todo como no rastreado (`??`),
    incluidas la carpeta generada, las dependencias y las credenciales: es lo que **no**
@@ -78,7 +78,7 @@ git ls-files
 5. `git ls-files` lista lo que quedó rastreado tras el commit: los archivos ignorados no
    están, y `src/docs/borrador.txt` sí, porque el patrón de la raíz no le alcanza.
 
-## Resultado esperado
+## ✅ Resultado esperado
 
 ```console
 $ git status -s
@@ -118,4 +118,4 @@ src/docs/borrador.txt
 src/programa.txt
 ```
 
-(El orden de las líneas de `git status` puede variar levemente entre versiones de Git.)
+> 💡 El orden de las líneas de `git status` puede variar levemente entre versiones de Git.

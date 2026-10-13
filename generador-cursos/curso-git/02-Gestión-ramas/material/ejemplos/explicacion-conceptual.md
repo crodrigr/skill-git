@@ -1,20 +1,20 @@
-# Explicación conceptual — Gestión de Ramas
+# 📚 Explicación conceptual — Gestión de Ramas
 
-## Ramas
+## 🌿 Ramas
 
-### Contexto
+### 🌍 Contexto
 
 En la Clase 01 trabajaste siempre sobre una única línea de commits. Pero en un
 proyecto real es común querer probar una idea, corregir un error puntual o
 desarrollar una función nueva sin arriesgar el código que ya funciona.
 
-### Concepto
+### 💡 Concepto
 
 Una **rama** (*branch*) es una línea de desarrollo paralela dentro del mismo
 repositorio: permite hacer commits propios sin afectar la rama principal (por
 convención llamada `master` o `main`) hasta que decidís incorporar esos cambios.
 
-### Explicación
+### 📖 Explicación
 
 - `git branch` lista las ramas existentes y marca con `*` en cuál estás parado.
 - `git branch <nombre>` crea una rama nueva, a partir del commit actual, sin moverte
@@ -29,14 +29,14 @@ convención llamada `master` o `main`) hasta que decidís incorporar esos cambio
 Cada rama es, en esencia, un puntero a un commit; moverte entre ramas no duplica
 archivos, solo cambia qué puntero estás siguiendo.
 
-## Merge y conflictos
+## 🔀 Merge y conflictos
 
-### Contexto
+### 🌍 Contexto
 
 Una rama aislada es útil mientras trabajás, pero en algún momento esos cambios tienen
 que volver a juntarse con el resto del proyecto.
 
-### Concepto
+### 💡 Concepto
 
 **Merge** (fusión) es la operación que incorpora los commits de una rama en otra. Si
 ambas ramas modificaron partes distintas, Git combina todo automáticamente. Si ambas
@@ -44,7 +44,7 @@ modificaron la **misma** parte de un archivo, Git no puede decidir solo: eso es 
 **conflicto de fusión**, y requiere que la persona decida cómo queda el resultado
 final.
 
-### Explicación
+### 📖 Explicación
 
 - Para fusionar, primero te parás en la rama que va a **recibir** los cambios (por
   ejemplo, `main`) y ejecutás `git merge <rama-a-fusionar>`.
@@ -66,22 +66,22 @@ final.
 - Después de resolver, se agrega el archivo al staging (`git add`) y se completa la
   fusión con `git commit` (Git ya deja preparado un mensaje por defecto).
 
-## Repositorio remoto
+## 🌐 Repositorio remoto
 
-### Contexto
+### 🌍 Contexto
 
 Hasta ahora todo tu trabajo con Git vivió únicamente en tu computadora. Si se rompe el
 disco, o si querés compartir el proyecto con alguien más, necesitás una copia en otro
 lugar.
 
-### Concepto
+### 💡 Concepto
 
 Un **repositorio remoto** es una copia de tu repositorio alojada en otro lugar —
 normalmente en una plataforma como **GitHub** — a la que te conectás para enviar
 (*push*) y traer (*pull*/*fetch*) cambios. Un mismo repositorio local puede estar
 conectado a uno o más remotos; el más común se llama, por convención, `origin`.
 
-### Explicación
+### 📖 Explicación
 
 **Crear el repositorio remoto (en GitHub)**:
 
@@ -110,15 +110,15 @@ git remote -v
 > que Git aloja del otro lado en GitHub. Para Git, conectarte a una ruta local
 > `--bare` o a una URL de GitHub es mecánicamente lo mismo.
 
-## Trabajo conjunto local/remoto
+## 🤝 Trabajo conjunto local/remoto
 
-### Contexto
+### 🌍 Contexto
 
 Tener el remoto conectado no sirve de mucho si el historial local y el remoto nunca
 se sincronizan. Falta aprender a enviar tus cambios y a traer los que no tenés
 todavía.
 
-### Concepto
+### 💡 Concepto
 
 **Publicar** (`push`) envía tus commits locales al remoto. **Traer** (`pull` o
 `fetch`) trae al local los commits que están en el remoto pero no en tu copia. Cuando
@@ -126,7 +126,7 @@ el remoto tiene commits que tu local no tiene, Git **rechaza** el `push` hasta q
 primero traigas esos cambios: así evita que se pierda el trabajo de otra persona (o
 el tuyo propio desde otra computadora).
 
-### Explicación
+### 📖 Explicación
 
 - `git push origin master` (o `git push -u origin master` la primera vez, para que
   Git recuerde la relación entre tu rama local y la del remoto) publica tus commits.
