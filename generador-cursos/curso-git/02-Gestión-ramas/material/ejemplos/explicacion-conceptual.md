@@ -2,6 +2,10 @@
 
 ## 🌿 Ramas
 
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 01 — Gestión básica de ramas](01-gestion-ramas.md): Crear, cambiar y eliminar ramas.
+
 ### 🌍 Contexto
 
 En la Clase 01 trabajaste siempre sobre una única línea de commits. Pero en un
@@ -30,6 +34,11 @@ Cada rama es, en esencia, un puntero a un commit; moverte entre ramas no duplica
 archivos, solo cambia qué puntero estás siguiendo.
 
 ## 🔀 Merge y conflictos
+
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 02 — Merge sin conflicto](02-merge-sin-conflicto.md): Fusionar ramas sin conflicto.
+> - [Ejemplo 03 — Merge con conflicto](03-merge-con-conflicto.md): Identificar y resolver un conflicto de fusión.
 
 ### 🌍 Contexto
 
@@ -67,6 +76,10 @@ final.
   fusión con `git commit` (Git ya deja preparado un mensaje por defecto).
 
 ## 🌐 Repositorio remoto
+
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 04 — Repositorio remoto y conexión](04-repositorio-remoto.md): Crear un repositorio remoto y conectarlo con el local.
 
 ### 🌍 Contexto
 
@@ -111,6 +124,10 @@ git remote -v
 > `--bare` o a una URL de GitHub es mecánicamente lo mismo.
 
 ## 🤝 Trabajo conjunto local/remoto
+
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 05 — Publicar y traer cambios](05-push-pull.md): Publicar cambios y traer los del remoto.
 
 ### 🌍 Contexto
 

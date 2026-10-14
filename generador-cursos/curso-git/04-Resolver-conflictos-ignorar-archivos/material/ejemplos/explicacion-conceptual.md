@@ -17,6 +17,10 @@ Resultados de aprendizaje de la clase:
 
 _Resultados de aprendizaje: RA-1_
 
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 01 — Conflicto en varios archivos](01-conflicto-varios-archivos.md): Identificar los archivos en conflicto, incluido el caso modificado y eliminado.
+
 ### 🌍 Contexto
 
 En la Clase 02 resolviste un conflicto de una sola línea entre dos ramas. En un proyecto
@@ -66,6 +70,12 @@ aparecen bajo `Changes to be committed` ya se fusionaron solos.
 
 _Resultados de aprendizaje: RA-1_
 
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 01 — Conflicto en varios archivos](01-conflicto-varios-archivos.md): Resolver conflictos en varios archivos.
+> - [Ejemplo 02 — Varios bloques de conflicto en un archivo](02-varios-bloques.md): Varios bloques en un mismo archivo y las tres decisiones.
+> - [Ejemplo 03 — Conflicto al hacer pull, publicar y abortar](03-conflicto-en-pull.md): Conflicto en pull, publicación y aborto.
+
 ### 🌍 Contexto
 
 Con los archivos en conflicto identificados, falta decidir qué contenido queda y dejar la
@@ -114,6 +124,10 @@ perder tus commits.
 
 _Resultados de aprendizaje: RA-1_
 
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 04 — Conflicto al recuperar cambios guardados y al revertir](04-conflicto-stash-revert.md): Conflictos al recuperar cambios guardados y al revertir.
+
 ### 🌍 Contexto
 
 Las fusiones y los pulls no son las únicas operaciones que pueden terminar en conflicto.
@@ -154,6 +168,11 @@ igual, y es lo que ves en cualquier terminal.
 ## 🙈 Ignorar archivos con .gitignore
 
 _Resultados de aprendizaje: RA-2_
+
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 05 — Crear un .gitignore con distintos patrones](05-crear-gitignore.md): Crear un .gitignore con distintos patrones.
+> - [Ejemplo 06 — Dejar de rastrear un archivo y averiguar por qué se ignora](06-dejar-de-rastrear.md): Dejar de rastrear un archivo y averiguar qué regla lo ignora.
 
 ### 🌍 Contexto
 

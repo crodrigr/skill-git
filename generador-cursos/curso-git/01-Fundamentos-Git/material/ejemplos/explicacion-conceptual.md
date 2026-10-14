@@ -2,6 +2,10 @@
 
 ## 🗂️ Control de versiones
 
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 02 — Repositorio, staging y commit](02-repositorio-staging-commit.md): Un primer historial en acción: cada commit queda registrado.
+
 ### 🌍 Contexto
 
 Imagina que estás escribiendo un documento importante y vas guardando copias con
@@ -34,6 +38,10 @@ cada cambio: guarda únicamente las diferencias necesarias para reconstruir cual
 versión del historial, de forma eficiente.
 
 ## ⚙️ Instalación y configuración
+
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 01 — Instalación y configuración de Git](01-instalacion-configuracion.md): Instalar Git y configurar nombre y correo.
 
 ### 🌍 Contexto
 
@@ -84,6 +92,10 @@ configurarla antes de continuar (ver Ejercicio Básico 01).
 
 ## 📁 Repositorio y staging
 
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 02 — Repositorio, staging y commit](02-repositorio-staging-commit.md): Crear un repositorio y mover cambios por el área de staging.
+
 ### 🌍 Contexto
 
 Con Git ya instalado y configurado, el siguiente paso es convertir una carpeta
@@ -115,6 +127,11 @@ no están listos para confirmarse.
 
 ## 💾 Commits e historial
 
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 02 — Repositorio, staging y commit](02-repositorio-staging-commit.md): Confirmar commits con mensajes descriptivos.
+> - [Ejemplo 03 — Navegación del historial](03-navegacion-historial.md): Consultar y navegar el historial.
+
 ### 🌍 Contexto
 
 Ya con cambios en el área de staging, falta el paso que realmente los registra en el
@@ -144,6 +161,10 @@ no modifica el repositorio, a diferencia de otros comandos de Git que sí lo hac
 que quedan fuera del alcance de esta clase).
 
 ## 📄 README.md
+
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 04 — Crear y confirmar un README.md](04-readme.md): Crear y confirmar un README.md.
 
 ### 🌍 Contexto
 

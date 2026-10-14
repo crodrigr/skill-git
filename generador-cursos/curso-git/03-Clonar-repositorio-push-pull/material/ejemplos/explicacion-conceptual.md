@@ -16,6 +16,10 @@ Resultados de aprendizaje de la clase:
 
 _Resultados de aprendizaje: RA-1_
 
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 01 — Clonar un repositorio](01-clonar-repositorio.md): Clonar un repositorio y verificar la copia.
+
 ### 🌍 Contexto
 
 En la Clase 02 creaste un repositorio vacío en GitHub y lo conectaste con uno local que
@@ -64,6 +68,12 @@ git config --get pull.rebase              # debe imprimir: false
 ## 🔁 Pull y push
 
 _Resultados de aprendizaje: RA-2, RA-3_
+
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 02 — Pull: con novedades, sin novedades y con cambios locales](02-pull.md): Pull con y sin novedades.
+> - [Ejemplo 03 — Push: commits y primer envío de una rama nueva](03-push.md): Push de commits y de una rama nueva.
+> - [Ejemplo 04 — Push rechazado: pull y reintento](04-push-rechazado.md): Un push rechazado y cómo resolverlo.
 
 ### 🌍 Contexto
 
@@ -117,6 +127,11 @@ que abra el editor para su mensaje: guardá y cerrá.
 
 _Resultados de aprendizaje: RA-2, RA-3_
 
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 01 — Clonar un repositorio](01-clonar-repositorio.md): Preparación de la clase: configuración de pull.
+> - [Ejemplo 04 — Push rechazado: pull y reintento](04-push-rechazado.md): El ciclo pull, commit, pull y push en un rechazo.
+
 ### 🌍 Contexto
 
 Con push y pull entendidos por separado, falta un hábito que evite los rechazos y los
@@ -163,6 +178,10 @@ el repositorio no existe para nadie; en el segundo, existe pero no para vos.
 ## ↩️ Revertir cambios
 
 _Resultados de aprendizaje: RA-4_
+
+> 🔗 **Ejemplos de este concepto**
+>
+> - [Ejemplo 05 — Revertir un commit y propagarlo al remoto](05-revert-local-remoto.md): Revertir un commit y propagarlo al remoto.
 
 ### 🌍 Contexto
 
