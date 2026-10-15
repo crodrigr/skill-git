@@ -23,7 +23,11 @@ computadora, publicarlo en GitHub y seguir enviando cambios**. Al terminar tené
 | Una **cuenta de GitHub** | Podés entrar a [github.com](https://github.com) con tu usuario |
 | Un **editor de texto** (por ejemplo, VS Code) | Podés crear y guardar archivos |
 | Un **navegador** | Podés abrir un archivo `.html` con doble clic |
-| Una **terminal** | Terminal en Linux y macOS; Git Bash o PowerShell en Windows |
+| Una **terminal** | Terminal de Ubuntu (o macOS); Git Bash o PowerShell en Windows. La terminal integrada de VS Code sirve en todos |
+
+> 📌 **Una guía para Ubuntu y para Windows.** Los comandos de **Git** son idénticos en los dos sistemas. Por eso esta guía no usa comandos del
+> sistema (como `mkdir`, `cd` o `touch`) para crear carpetas y archivos: **los creás con el explorador de archivos y con tu editor**, que funcionan igual en
+> los dos. Lo único que escribís en la terminal son comandos que empiezan con `git`.
 
 Git necesita saber **quién sos** para firmar tus commits. Comprobá si ya lo configuraste:
 
@@ -50,19 +54,23 @@ git config --global user.email "tu-correo@ejemplo.com"
 
 ### Paso 1 — Crear la carpeta del proyecto
 
-Elegí un lugar donde guardar tus proyectos (por ejemplo, una carpeta `proyectos`) y creá ahí la carpeta del sitio. Después, entrá en ella.
+Con el **explorador de archivos** de tu sistema, elegí un lugar donde guardar tus proyectos (por ejemplo, una carpeta `proyectos`) y creá ahí una
+carpeta nueva llamada `mi-sitio-web`:
 
-```bash
-mkdir mi-sitio-web
-cd mi-sitio-web
-```
+- **Ubuntu:** abrí **Archivos**, hacé clic derecho en un lugar vacío y elegí **Nueva carpeta**.
+- **Windows:** abrí el **Explorador de archivos**, hacé clic derecho en un lugar vacío y elegí **Nuevo → Carpeta**.
 
-> 💡 Todos los comandos que siguen se ejecutan **dentro de `mi-sitio-web`**, salvo que se indique otra cosa. Si dudás de dónde estás,
-> ejecutá `pwd` (muestra la carpeta actual).
+Escribí el nombre **sin espacios y en minúsculas**: `mi-sitio-web`.
+
+Después, **abrí esa carpeta en VS Code**: menú **Archivo → Abrir carpeta…** y elegí `mi-sitio-web`.
+
+> 💡 Si no tenés VS Code, podés usar otro editor que te deje crear archivos y carpetas dentro de la carpeta del proyecto. Evitá el Bloc de notas
+> de Windows: suele guardar los archivos con la extensión `.txt` escondida.
 
 ### Paso 2 — Crear los archivos del sitio
 
-Con tu editor, creá estos dos archivos dentro de `mi-sitio-web`, con **exactamente** esta estructura:
+En VS Code, en el panel **Explorador** (a la izquierda), pasá el cursor sobre el nombre de tu carpeta: aparecen los botones **Nuevo archivo** y
+**Nueva carpeta**. Creá, dentro de `mi-sitio-web`, **exactamente** esta estructura:
 
 ```text
 mi-sitio-web/
@@ -70,6 +78,14 @@ mi-sitio-web/
 └── css/
     └── estilos.css
 ```
+
+1. Con **Nuevo archivo**, creá `index.html`.
+2. Con **Nueva carpeta**, creá `css`.
+3. Hacé clic sobre la carpeta `css`, usá **Nuevo archivo** y creá `estilos.css`.
+
+> ⚠️ **En Windows**, el Explorador de archivos puede **esconder las extensiones**. Si creás los archivos desde ahí, podrías terminar con
+> `index.html.txt`. Creándolos desde VS Code no pasa. Para verificarlo, en el Explorador de archivos activá **Ver → Mostrar → Extensiones de
+> nombre de archivo**.
 
 Contenido de `index.html`:
 
@@ -115,21 +131,28 @@ Abrí `index.html` con doble clic (o arrastralo al navegador).
 
 ### Paso 4 — Convertir la carpeta en un repositorio de Git
 
+Abrí la **terminal dentro de la carpeta del proyecto**. En VS Code: menú **Terminal → Nueva terminal**; se abre ya ubicada en `mi-sitio-web`.
+
+> 💡 Si preferís otra terminal, abrila en esa carpeta: en Ubuntu, clic derecho en la carpeta y **Abrir en una terminal**; en Windows, clic derecho y
+> **Open Git Bash here** (si tenés Git Bash). **Todos los comandos que siguen se escriben en esa terminal.**
+
+Escribí:
+
 ```bash
-git init -b main
+git init -b master
 ```
 
-El `-b main` le pone `main` a la rama principal, que es el nombre que usa GitHub.
+El `-b master` le pone `master` a la rama principal, que es el nombre que usamos en todo el curso.
 
 ✅ **Resultado esperado**
 
 ```console
-$ git init -b main
+$ git init -b master
 Initialized empty Git repository in /ruta/a/mi-sitio-web/.git/
 ```
 
-> 📌 En otras partes del curso vas a ver `master`: es el mismo concepto con otro nombre. Lo importante es que uses **el mismo nombre
-> en todos los pasos** de esta guía.
+> 📌 Los proyectos nuevos de GitHub suelen proponer `main` como nombre de la rama principal. En este curso usamos `master`: es el mismo concepto con otro
+> nombre. Lo importante es que uses **el mismo nombre en todos los pasos** de esta guía.
 
 Comprobá el estado:
 
@@ -139,7 +162,7 @@ git status
 
 ```console
 $ git status
-On branch main
+On branch master
 
 No commits yet
 
@@ -166,7 +189,7 @@ El punto significa «todo lo de esta carpeta».
 
 ```console
 $ git status
-On branch main
+On branch master
 
 No commits yet
 
@@ -189,7 +212,7 @@ git log --oneline
 
 ```console
 $ git commit -m "Primer commit: estructura inicial del sitio"
-[main (root-commit) 772f8e5] Primer commit: estructura inicial del sitio
+[master (root-commit) 772f8e5] Primer commit: estructura inicial del sitio
  2 files changed, 21 insertions(+)
  create mode 100644 css/estilos.css
  create mode 100644 index.html
@@ -249,10 +272,10 @@ Una línea es para **traer** cambios (*fetch*) y otra para **publicar** (*push*)
 ### Paso 9 — Publicar tu proyecto (push)
 
 ```bash
-git push -u origin main
+git push -u origin master
 ```
 
-Esto sube la rama `main` al remoto `origin`. La opción `-u` deja **recordada** la relación: más adelante alcanzará con escribir
+Esto sube la rama `master` al remoto `origin`. La opción `-u` deja **recordada** la relación: más adelante alcanzará con escribir
 `git push`.
 
 **Cuando Git te pida la clave.** Con HTTPS, Git te pide un **usuario** y una **contraseña**:
@@ -278,10 +301,10 @@ Para crear un token (una sola vez):
 ✅ **Resultado esperado** (en GitHub, Git muestra además líneas de progreso, como `Enumerating objects` o `Writing objects`)
 
 ```console
-$ git push -u origin main
+$ git push -u origin master
 To https://github.com/tu-usuario/mi-sitio-web.git
- * [new branch]      main -> main
-Branch 'main' set up to track remote branch 'main' from 'origin'.
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 
 ### Paso 10 — Comprobar el resultado en GitHub
@@ -289,6 +312,9 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 1. Volvé a la página de tu repositorio en GitHub y recargala (**F5**).
 2. Tenés que ver los archivos `index.html` y la carpeta `css`.
 3. Hacé clic en **commits** (o en el reloj con el número de commits) y buscá tu mensaje: «Primer commit: estructura inicial del sitio».
+
+> 💡 Si GitHub no muestra tus archivos, abrí el selector de ramas (arriba a la izquierda de la lista de archivos) y elegí `master`.
+> Si querés que `master` sea la rama que se abre por defecto, cambialo en la configuración del repositorio (**Settings**), en la sección de ramas.
 
 También podés comprobarlo desde la terminal:
 
@@ -298,10 +324,10 @@ git status -sb
 
 ```console
 $ git status -sb
-## main...origin/main
+## master...origin/master
 ```
 
-Que no aparezca nada más junto a `main...origin/main` significa que **tu rama local y la de GitHub están al día**.
+Que no aparezca nada más junto a `master...origin/master` significa que **tu rama local y la de GitHub están al día**.
 
 🎉 Tu sitio ya está publicado en GitHub.
 
@@ -352,8 +378,8 @@ git diff
 
 ```console
 $ git status
-On branch main
-Your branch is up to date with 'origin/main'.
+On branch master
+Your branch is up to date with 'origin/master'.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -391,11 +417,11 @@ git status -sb
 
 ```console
 $ git commit -m "Agrega la sección Sobre mí"
-[main 670b6df] Agrega la sección Sobre mí
+[master 670b6df] Agrega la sección Sobre mí
  1 file changed, 2 insertions(+)
 
 $ git status -sb
-## main...origin/main [ahead 1]
+## master...origin/master [ahead 1]
 ```
 
 `[ahead 1]` significa que tenés **un commit que todavía no está en GitHub**.
@@ -413,7 +439,7 @@ Como en el paso 9 usaste `-u`, ahora alcanza con `git push`.
 ```console
 $ git push
 To https://github.com/tu-usuario/mi-sitio-web.git
-   772f8e5..670b6df  main -> main
+   772f8e5..670b6df  master -> master
 ```
 
 ### Paso 15 — Comprobar el cambio en GitHub
@@ -435,7 +461,7 @@ $ git log --oneline
 772f8e5 Primer commit: estructura inicial del sitio
 
 $ git status -sb
-## main...origin/main
+## master...origin/master
 ```
 
 🎉 Completaste la guía.
@@ -451,20 +477,21 @@ Marcá cada punto cuando lo hayas logrado:
 - [ ] `git remote -v` muestra tu repositorio de GitHub.
 - [ ] En GitHub se ven `index.html` y la carpeta `css`.
 - [ ] En GitHub, `index.html` incluye la sección «Sobre mí».
-- [ ] `git status -sb` muestra `## main...origin/main`, sin nada más.
+- [ ] `git status -sb` muestra `## master...origin/master`, sin nada más.
 
 ## 🧯 Si algo falla
 
 | Lo que ves | Qué pasó | Qué hacer |
 |---|---|---|
-| `fatal: not a git repository` | Estás fuera de la carpeta del proyecto, o no hiciste `git init` | Entrá en `mi-sitio-web` (`cd mi-sitio-web`) y ejecutá `git init -b main` si hace falta |
-| `error: src refspec main does not match any` y `failed to push some refs` | Intentaste publicar sin ningún commit, o tu rama no se llama `main` | Hacé el primer commit (pasos 5 y 6) y revisá el nombre de tu rama con `git branch` |
+| `fatal: not a git repository` | La terminal no está en la carpeta del proyecto, o no hiciste `git init` | Cerrá la terminal y abrí una nueva dentro de `mi-sitio-web` (paso 4); si hace falta, ejecutá `git init -b master` |
+| `warning: LF will be replaced by CRLF` (en Windows) | Es solo un aviso sobre los saltos de línea | No hace falta hacer nada: el comando se completa igual |
+| `error: src refspec master does not match any` y `failed to push some refs` | Intentaste publicar sin ningún commit, o tu rama no se llama `master` | Hacé el primer commit (pasos 5 y 6) y revisá el nombre de tu rama con `git branch` |
 | `error: remote origin already exists.` | Ya habías ejecutado `git remote add origin …` | Para cambiar la dirección: `git remote set-url origin <dirección>` |
 | `Authentication failed` o te rechaza la contraseña | Usaste la contraseña de tu cuenta, o el token no tiene permisos | Creá un token con permiso **Contents: Read and write** sobre el repositorio y pegalo como contraseña |
 | `Repository not found` | La dirección está mal escrita (usuario o nombre del repositorio) | Verificá con `git remote -v` y corregí con `git remote set-url` |
-| `! [rejected] main -> main (fetch first)` al publicar | El repositorio de GitHub ya tenía commits (por ejemplo, un README) y tu historial no los incluye | Es el motivo por el que no se agrega un README al crearlo. Más adelante en el curso aprendés a unir los dos historiales con `git pull` |
+| `! [rejected] master -> master (fetch first)` al publicar | El repositorio de GitHub ya tenía commits (por ejemplo, un README) y tu historial no los incluye | Es el motivo por el que no se agrega un README al crearlo. Más adelante en el curso aprendés a unir los dos historiales con `git pull` |
 | `nothing to commit, working tree clean` | No hay cambios para guardar | Revisá que hayas **guardado** el archivo en el editor |
-| `Your branch is ahead of 'origin/main'` | Tenés commits locales sin publicar | Ejecutá `git push` |
+| `Your branch is ahead of 'origin/master'` | Tenés commits locales sin publicar | Ejecutá `git push` |
 
 > 💡 Cuando un comando falle, **leé el mensaje completo**: casi siempre dice qué pasó y, muchas veces, qué comando probar.
 
@@ -484,16 +511,16 @@ Para aprender el ciclo hay que repetirlo. Hacé la guía **otra vez, desde el pa
 
 | # | Qué querés hacer | Comando |
 |---|---|---|
-| 1 | Convertir la carpeta en repositorio | `git init -b main` |
+| 1 | Convertir la carpeta en repositorio | `git init -b master` |
 | 2 | Preparar todos los archivos | `git add .` |
 | 3 | Guardar la primera versión | `git commit -m "…"` |
 | 4 | Relacionar con GitHub | `git remote add origin <dirección>` |
-| 5 | Publicar por primera vez | `git push -u origin main` |
+| 5 | Publicar por primera vez | `git push -u origin master` |
 | 6 | Revisar los cambios | `git status` y `git diff` |
 | 7 | Guardar un cambio | `git add <archivo>` y `git commit -m "…"` |
 | 8 | Publicar un cambio | `git push` |
 
 ## 🌿 Para seguir
 
-Esta guía trabaja siempre sobre la rama `main`. En esta clase vas a aprender a trabajar con **ramas**: repetí el paso 11 al 14 creando antes una rama
+Esta guía trabaja siempre sobre la rama `master`. En esta clase vas a aprender a trabajar con **ramas**: repetí el paso 11 al 14 creando antes una rama
 (`git switch -c mejora-sobre-mi`), y publicala con `git push -u origin mejora-sobre-mi`.
