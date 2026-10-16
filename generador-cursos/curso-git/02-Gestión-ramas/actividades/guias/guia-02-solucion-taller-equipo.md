@@ -201,7 +201,9 @@ con los que terminó la Guía 01.
 > ⚠️ Copiá el código **tal como está**, con sus espacios al comienzo de cada línea: así las tareas chocan donde tienen que chocar y los conflictos de esta guía son
 > los mismos que vas a ver vos.
 
-### Tarea 1 — Menú de navegación (Ana, rama `tarea/menu`)
+### Tarea 1 — Menú de navegación
+
+👤 Ana · 🌿 Rama `tarea/menu`
 
 En `index.html`, pegá este bloque **justo debajo** de la línea `<h1>Mi sitio web</h1>`:
 
@@ -215,7 +217,9 @@ En `index.html`, pegá este bloque **justo debajo** de la línea `<h1>Mi sitio w
 
 Mensaje del commit: `Agrega el menú de navegación`.
 
-### Tarea 2 — Sección «Proyectos» (Bruno, rama `tarea/proyectos`)
+### Tarea 2 — Sección «Proyectos»
+
+👤 Bruno · 🌿 Rama `tarea/proyectos`
 
 En `index.html`, pegá este bloque **justo antes** de la línea `</body>`:
 
@@ -226,7 +230,9 @@ En `index.html`, pegá este bloque **justo antes** de la línea `</body>`:
 
 Mensaje del commit: `Agrega la sección Proyectos`.
 
-### Tarea 3 — Sección «Contacto» (Carla, rama `tarea/contacto`)
+### Tarea 3 — Sección «Contacto»
+
+👤 Carla · 🌿 Rama `tarea/contacto`
 
 En `index.html`, pegá este bloque **justo antes** de la línea `</body>`:
 
@@ -237,7 +243,9 @@ En `index.html`, pegá este bloque **justo antes** de la línea `</body>`:
 
 Mensaje del commit: `Agrega la sección Contacto`.
 
-### Tarea 4 — Pie de página (Facundo, rama `tarea/pie`)
+### Tarea 4 — Pie de página
+
+👤 Facundo · 🌿 Rama `tarea/pie`
 
 En `index.html`, pegá este bloque **justo antes** de la línea `</body>`:
 
@@ -249,7 +257,9 @@ En `index.html`, pegá este bloque **justo antes** de la línea `</body>`:
 
 Mensaje del commit: `Agrega el pie de página`.
 
-### Tarea 5 — Estilos del texto (Diego, rama `tarea/estilos`)
+### Tarea 5 — Estilos del texto
+
+👤 Diego · 🌿 Rama `tarea/estilos`
 
 En `css/estilos.css`, pegá este bloque **al final del archivo**, dejando una línea en blanco después de la última llave `}`:
 
@@ -265,7 +275,9 @@ p {
 
 Mensaje del commit: `Agrega estilos para subtítulos y párrafos`.
 
-### Tarea 6 — Página «Galería» (Elena, rama `tarea/galeria`)
+### Tarea 6 — Página «Galería»
+
+👤 Elena · 🌿 Rama `tarea/galeria`
 
 1. Creá en VS Code un archivo nuevo, `galeria.html`, **en la misma carpeta que `index.html`**, con este contenido:
 
