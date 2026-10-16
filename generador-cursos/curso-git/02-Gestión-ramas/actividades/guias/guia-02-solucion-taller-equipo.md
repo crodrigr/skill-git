@@ -25,14 +25,17 @@ Para que los ejemplos sean concretos, la guía sigue a un grupo ficticio. Reempl
 | Ana | Propietaria del repositorio (`ana-ejemplo` en GitHub) | 1. Menú de navegación | `tarea/menu` |
 | Bruno | Colaborador | 2. Sección «Proyectos» | `tarea/proyectos` |
 | Carla | Colaboradora | 3. Sección «Contacto» | `tarea/contacto` |
-| Diego | Colaborador | 5. Estilos del texto (subtítulos) | `tarea/estilos-titulos` |
-| Elena | Colaboradora | 5. Estilos del texto (párrafos) | `tarea/estilos-parrafos` |
+| Diego | Colaborador | 5. Estilos del texto | `tarea/estilos` |
+| Elena | Colaboradora | 6. Página «Galería» | `tarea/galeria` |
 | Facundo | Colaborador | 4. Pie de página | `tarea/pie` |
 
 La dirección del repositorio del ejemplo es `https://github.com/ana-ejemplo/mi-sitio-web.git`. **Usá la de tu grupo.**
 
+> 📋 **El código de cada tarea ya está escrito** en la sección [El código de cada tarea](#-el-código-de-cada-tarea): **copialo y pegalo**. El objetivo del taller
+> no es escribir HTML ni CSS, sino **practicar Git**: ramas, integración y conflictos.
+>
 > 📌 **Resultados esperados.** Las salidas de los comandos de esta guía se comprobaron con Git 2.34 sobre un repositorio de prueba. Los códigos de siete caracteres
-> (como `c757e81`) serán **distintos en tu computadora**, y al trabajar con GitHub vas a ver además algunas líneas de progreso (`Enumerating objects…`,
+> (como `9ad8491`) serán **distintos en tu computadora**, y al trabajar con GitHub vas a ver además algunas líneas de progreso (`Enumerating objects…`,
 > `Writing objects…`). Los textos de la interfaz de GitHub pueden cambiar con el tiempo: si un botón tiene otro nombre, buscá la opción equivalente.
 
 ---
@@ -171,8 +174,8 @@ git branch -a
 
 ```console
 $ git log --oneline
-0ffcec4 Agrega la sección Sobre mí
-26c02a0 Primer commit: estructura inicial del sitio
+449472e Agrega la sección Sobre mí
+02121e5 Primer commit: estructura inicial del sitio
 
 $ git remote -v
 origin  https://github.com/ana-ejemplo/mi-sitio-web.git (fetch)
@@ -187,6 +190,114 @@ $ git branch -a
 - Tenés **el mismo historial** que Ana.
 - `origin` ya apunta al repositorio de GitHub: no hace falta `git remote add`.
 - `remotes/origin/master` es la copia que tu Git guarda de la rama `master` de GitHub.
+
+---
+
+## 📦 El código de cada tarea
+
+Cada persona copia **solo el código de su tarea**, en el lugar indicado, **dentro de su rama** (paso 10). Todos parten del `index.html` y del `css/estilos.css`
+con los que terminó la Guía 01.
+
+> ⚠️ Copiá el código **tal como está**, con sus espacios al comienzo de cada línea: así las tareas chocan donde tienen que chocar y los conflictos de esta guía son
+> los mismos que vas a ver vos.
+
+### Tarea 1 — Menú de navegación (Ana, rama `tarea/menu`)
+
+En `index.html`, pegá este bloque **justo debajo** de la línea `<h1>Mi sitio web</h1>`:
+
+```html
+    <nav>
+      <a href="#proyectos">Proyectos</a> |
+      <a href="#contacto">Contacto</a> |
+      <a href="galeria.html">Galería</a>
+    </nav>
+```
+
+Mensaje del commit: `Agrega el menú de navegación`.
+
+### Tarea 2 — Sección «Proyectos» (Bruno, rama `tarea/proyectos`)
+
+En `index.html`, pegá este bloque **justo antes** de la línea `</body>`:
+
+```html
+    <h2 id="proyectos">Proyectos</h2>
+    <p>Mi primer proyecto es este sitio web, hecho en equipo con Git.</p>
+```
+
+Mensaje del commit: `Agrega la sección Proyectos`.
+
+### Tarea 3 — Sección «Contacto» (Carla, rama `tarea/contacto`)
+
+En `index.html`, pegá este bloque **justo antes** de la línea `</body>`:
+
+```html
+    <h2 id="contacto">Contacto</h2>
+    <p>Escribinos a equipo@ejemplo.com.</p>
+```
+
+Mensaje del commit: `Agrega la sección Contacto`.
+
+### Tarea 4 — Pie de página (Facundo, rama `tarea/pie`)
+
+En `index.html`, pegá este bloque **justo antes** de la línea `</body>`:
+
+```html
+    <footer>
+      <p>© 2026 Equipo del taller de Git</p>
+    </footer>
+```
+
+Mensaje del commit: `Agrega el pie de página`.
+
+### Tarea 5 — Estilos del texto (Diego, rama `tarea/estilos`)
+
+En `css/estilos.css`, pegá este bloque **al final del archivo**, dejando una línea en blanco después de la última llave `}`:
+
+```css
+h2 {
+  color: #2563eb;
+}
+
+p {
+  line-height: 1.6;
+}
+```
+
+Mensaje del commit: `Agrega estilos para subtítulos y párrafos`.
+
+### Tarea 6 — Página «Galería» (Elena, rama `tarea/galeria`)
+
+1. Creá en VS Code un archivo nuevo, `galeria.html`, **en la misma carpeta que `index.html`**, con este contenido:
+
+   ```html
+   <!doctype html>
+   <html lang="es">
+     <head>
+       <meta charset="utf-8">
+       <title>Galería</title>
+       <link rel="stylesheet" href="css/estilos.css">
+     </head>
+     <body>
+       <h1>Galería</h1>
+       <p class="galeria">Pronto vas a ver acá las fotos de nuestros proyectos.</p>
+       <p><a href="index.html">Volver al inicio</a></p>
+     </body>
+   </html>
+   ```
+
+2. En `css/estilos.css`, pegá este bloque **al final del archivo**, dejando una línea en blanco después de la última llave `}`:
+
+   ```css
+   .galeria {
+     padding: 1rem;
+     background-color: #dbeafe;
+   }
+   ```
+
+Como agregaste un archivo nuevo, preparalo con `git add .` (o `git add galeria.html css/estilos.css`). Mensaje del commit: `Agrega la página Galería`.
+
+> 💡 **¿Cuál choca con cuál?** Las tareas 2, 3 y 4 pegan su código **en el mismo lugar** de `index.html`; las tareas 5 y 6, **al final** de `css/estilos.css`. La
+> tarea 1 se pega en otro lugar y no choca con nadie.
 
 ---
 
@@ -236,17 +347,18 @@ El asterisco marca la rama en la que estás. Todo lo que guardes ahora queda en 
 
 ### Paso 11 — Hacer la tarea
 
-Bruno abre `index.html` y agrega, justo **antes** de `</body>`:
+Copiá el código de **tu** tarea desde [El código de cada tarea](#-el-código-de-cada-tarea) y pegalo donde se indica. Bruno abre `index.html` y pega, justo
+**antes** de `</body>`:
 
 ```html
-    <h2>Proyectos</h2>
-    <p>Mi primer proyecto es este sitio web.</p>
+    <h2 id="proyectos">Proyectos</h2>
+    <p>Mi primer proyecto es este sitio web, hecho en equipo con Git.</p>
 ```
 
-Guarda el archivo y lo prueba en el navegador.
+Guardá el archivo y probalo en el navegador.
 
-> 💡 **Cada tarea, lo suyo.** Carla agrega su sección «Contacto» en el mismo lugar; Facundo, su `<footer>`; Ana, un `<nav>` debajo del `<h1>`; Diego y Elena
-> agregan reglas al final de `css/estilos.css`. Todos siguen los mismos pasos.
+> 💡 **Todas las personas trabajan a la vez.** Cada una crea su rama desde el mismo `master` y pega su código. Lo interesante empieza al integrar: quien integra
+> primero no tiene problemas; quien integra después se encuentra con los cambios de los demás.
 
 ### Paso 12 — Guardar el trabajo en la rama
 
@@ -260,7 +372,7 @@ git commit -m "Agrega la sección Proyectos"
 
 ```console
 $ git commit -m "Agrega la sección Proyectos"
-[tarea/proyectos c757e81] Agrega la sección Proyectos
+[tarea/proyectos 9ad8491] Agrega la sección Proyectos
  1 file changed, 2 insertions(+)
 ```
 
@@ -308,7 +420,7 @@ git merge tarea/proyectos
 
 ```console
 $ git merge tarea/proyectos
-Updating 0ffcec4..c757e81
+Updating 449472e..9ad8491
 Fast-forward
  index.html | 2 ++
  1 file changed, 2 insertions(+)
@@ -327,7 +439,7 @@ git push
 ```console
 $ git push
 To https://github.com/ana-ejemplo/mi-sitio-web.git
-   0ffcec4..c757e81  master -> master
+   449472e..9ad8491  master -> master
 ```
 
 💬 **Avisá al grupo** que publicaste: el resto tiene que hacer `git pull` antes de integrar.
@@ -340,7 +452,7 @@ git branch -d tarea/proyectos
 
 ```console
 $ git branch -d tarea/proyectos
-Deleted branch tarea/proyectos (was c757e81).
+Deleted branch tarea/proyectos (was 9ad8491).
 ```
 
 Si la habías publicado en el paso 13, borrala también en GitHub:
@@ -377,8 +489,8 @@ git merge tarea/contacto
 ```console
 $ git pull
 From https://github.com/ana-ejemplo/mi-sitio-web
-   0ffcec4..c757e81  master     -> origin/master
-Updating 0ffcec4..c757e81
+   449472e..9ad8491  master     -> origin/master
+Updating 449472e..9ad8491
 Fast-forward
  index.html | 2 ++
  1 file changed, 2 insertions(+)
@@ -422,11 +534,11 @@ Abrí `index.html`. Git dejó las dos versiones, separadas por **marcas**:
     <h2>Sobre mí</h2>
     <p>Estoy aprendiendo a crear sitios web.</p>
 <<<<<<< HEAD
-    <h2>Proyectos</h2>
-    <p>Mi primer proyecto es este sitio web.</p>
+    <h2 id="proyectos">Proyectos</h2>
+    <p>Mi primer proyecto es este sitio web, hecho en equipo con Git.</p>
 =======
-    <h2>Contacto</h2>
-    <p>Escribime a ana@ejemplo.com.</p>
+    <h2 id="contacto">Contacto</h2>
+    <p>Escribinos a equipo@ejemplo.com.</p>
 >>>>>>> tarea/contacto
   </body>
 ```
@@ -444,10 +556,10 @@ Hay que dejar el archivo **como tiene que quedar** y **borrar las tres marcas**.
 ```html
     <h2>Sobre mí</h2>
     <p>Estoy aprendiendo a crear sitios web.</p>
-    <h2>Proyectos</h2>
-    <p>Mi primer proyecto es este sitio web.</p>
-    <h2>Contacto</h2>
-    <p>Escribime a ana@ejemplo.com.</p>
+    <h2 id="proyectos">Proyectos</h2>
+    <p>Mi primer proyecto es este sitio web, hecho en equipo con Git.</p>
+    <h2 id="contacto">Contacto</h2>
+    <p>Escribinos a equipo@ejemplo.com.</p>
   </body>
 ```
 
@@ -480,7 +592,7 @@ Changes to be committed:
     modified:   index.html
 
 $ git commit
-[master 0bc94ad] Merge branch 'tarea/contacto'
+[master fa75803] Merge branch 'tarea/contacto'
 ```
 
 Al hacer `git commit` **sin `-m`**, Git abre el editor con un mensaje ya escrito, `Merge branch 'tarea/contacto'`. **Guardá y cerrá** (paso 3) para terminar.
@@ -497,16 +609,16 @@ git log --oneline --graph
 ```console
 $ git push
 To https://github.com/ana-ejemplo/mi-sitio-web.git
-   c757e81..0bc94ad  master -> master
+   9ad8491..fa75803  master -> master
 
 $ git log --oneline --graph
-*   0bc94ad Merge branch 'tarea/contacto'
+*   fa75803 Merge branch 'tarea/contacto'
 |\
-| * b7c479c Agrega la sección Contacto
-* | c757e81 Agrega la sección Proyectos
+| * 5b83e96 Agrega la sección Contacto
+* | 9ad8491 Agrega la sección Proyectos
 |/
-* 0ffcec4 Agrega la sección Sobre mí
-* 26c02a0 Primer commit: estructura inicial del sitio
+* 449472e Agrega la sección Sobre mí
+* 02121e5 Primer commit: estructura inicial del sitio
 ```
 
 El gráfico muestra las dos líneas de trabajo y el **commit de fusión** que las une. Después, Carla borra su rama (paso 17).
@@ -517,8 +629,8 @@ El gráfico muestra las dos líneas de trabajo y el **commit de fusión** que la
 
 ## 🪜 Parte 6 — GitHub rechaza tu publicación
 
-Mientras tanto, **Diego** terminó su tarea (color de los subtítulos, al final de `css/estilos.css`) y la integró en su `master`, **pero sin hacer `git pull`
-antes** (se salteó el paso 14). Al publicar:
+Mientras tanto, **Diego** terminó su tarea (estilos para subtítulos y párrafos, al final de `css/estilos.css`) y la integró en su `master`, **pero sin hacer
+`git pull` antes** (se salteó el paso 14). Al publicar:
 
 ### Paso 24 — El rechazo
 
@@ -548,7 +660,7 @@ git pull
 ```console
 $ git pull
 From https://github.com/ana-ejemplo/mi-sitio-web
-   0ffcec4..0bc94ad  master     -> origin/master
+   449472e..fa75803  master     -> origin/master
 Merge made by the 'ort' strategy.
  index.html | 4 ++++
  1 file changed, 4 insertions(+)
@@ -563,18 +675,18 @@ git push
 ```console
 $ git push
 To https://github.com/ana-ejemplo/mi-sitio-web.git
-   0bc94ad..0269ff9  master -> master
+   fa75803..62157bd  master -> master
 ```
 
 ### Paso 26 — Rechazo **con** conflicto
 
-**Elena** agregó, también al final de `css/estilos.css`, la altura de línea de los párrafos, y le pasó lo mismo que a Diego: su publicación fue rechazada. Pero al hacer
-`git pull`, como **los dos agregaron reglas en el mismo lugar**, hay conflicto:
+**Elena** hizo la página «Galería» y agregó su estilo `.galeria`, también al final de `css/estilos.css`. Le pasó lo mismo que a Diego: integró sin actualizar y su
+publicación fue rechazada. Pero al hacer `git pull`, como **Diego y ella agregaron reglas en el mismo lugar**, hay conflicto:
 
 ```console
 $ git pull
 From https://github.com/ana-ejemplo/mi-sitio-web
-   0bc94ad..0269ff9  master     -> origin/master
+   449472e..62157bd  master     -> origin/master
 Auto-merging css/estilos.css
 CONFLICT (content): Merge conflict in css/estilos.css
 Automatic merge failed; fix conflicts and then commit the result.
@@ -588,19 +700,24 @@ h1 {
 }
 
 <<<<<<< HEAD
-p {
-  line-height: 1.6;
+.galeria {
+  padding: 1rem;
+  background-color: #dbeafe;
 =======
 h2 {
   color: #2563eb;
->>>>>>> 0269ff9a7d9a1d0bb5f5150bf490035e40a51ff4
+}
+
+p {
+  line-height: 1.6;
+>>>>>>> 62157bd1540cab2313de6dd037200d520c8cb124
 }
 ```
 
 > ⚠️ **Mirá la llave final `}`.** Quedó **fuera** de las marcas porque las dos versiones la tenían igual. Si solo borrás las marcas, te queda una regla sin cerrar.
 > Por eso, revisá siempre que el resultado tenga sentido, no solo que no queden marcas.
 
-La resolución correcta deja **las dos reglas completas**:
+La resolución correcta deja **las tres reglas completas**, cada una con su llave de cierre:
 
 ```css
 h1 {
@@ -613,6 +730,11 @@ h2 {
 
 p {
   line-height: 1.6;
+}
+
+.galeria {
+  padding: 1rem;
+  background-color: #dbeafe;
 }
 ```
 
@@ -628,18 +750,56 @@ git push
 
 ```console
 $ git commit
-[master 3c37d6b] Merge branch 'master' of https://github.com/ana-ejemplo/mi-sitio-web
+[master 77ee3e8] Merge branch 'master' of https://github.com/ana-ejemplo/mi-sitio-web
 
 $ git push
 To https://github.com/ana-ejemplo/mi-sitio-web.git
-   0269ff9..3c37d6b  master -> master
+   62157bd..77ee3e8  master -> master
 ```
+
+### Paso 27 — Las últimas integraciones: Ana y Facundo
+
+**Ana** integra su menú siguiendo el ciclo completo (pasos 14 a 16). Como su `<nav>` va debajo del `<h1>`, lejos de lo que cambiaron los demás, **no hay conflicto**,
+pero `master` ya tenía commits nuevos: Git hace un **commit de fusión** y abre el editor para que confirmes el mensaje (guardá y cerrá).
+
+```console
+$ git merge tarea/menu
+Auto-merging index.html
+Merge made by the 'ort' strategy.
+ index.html | 5 +++++
+ 1 file changed, 5 insertions(+)
+```
+
+**Facundo** integra al final. Su pie de página va antes de `</body>`, donde ya están «Proyectos» y «Contacto»:
+
+```console
+$ git merge tarea/pie
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+```html
+<<<<<<< HEAD
+    <h2 id="proyectos">Proyectos</h2>
+    <p>Mi primer proyecto es este sitio web, hecho en equipo con Git.</p>
+    <h2 id="contacto">Contacto</h2>
+    <p>Escribinos a equipo@ejemplo.com.</p>
+=======
+    <footer>
+      <p>© 2026 Equipo del taller de Git</p>
+    </footer>
+>>>>>>> tarea/pie
+```
+
+Se resuelve como en el paso 21: **se conservan las dos partes**, con el pie de página al final, y se borran las marcas. Después, `git add index.html`, `git commit`
+y `git push`.
 
 ---
 
 ## 🪜 Parte 7 — Cierre del taller
 
-### Paso 27 — Todas las personas se actualizan
+### Paso 28 — Todas las personas se actualizan
 
 Cuando el grupo terminó de integrar, **cada persona** actualiza su `master` y limpia las ramas remotas que ya no existen:
 
@@ -651,7 +811,7 @@ git fetch --prune
 
 `git fetch --prune` borra de tu computadora la copia de las ramas que alguien ya eliminó en GitHub.
 
-### Paso 28 — Comprobar el resultado
+### Paso 29 — Comprobar el resultado
 
 ```bash
 git log --oneline --graph --all
@@ -662,10 +822,45 @@ git status -sb
 ✅ **Lo que tenés que ver**
 
 - En el gráfico, un commit de cada tarea y los commits de fusión que las unen.
-- En `git branch -a`, solo `master` y `remotes/origin/master` (sin ramas `tarea/…`).
+- En `git branch -a`, solo `master`, `remotes/origin/HEAD -> origin/master` y `remotes/origin/master` (sin ramas `tarea/…`).
 - `git status -sb` muestra `## master...origin/master`, sin nada más.
-- En el navegador, `index.html` muestra el menú, «Sobre mí», «Proyectos», «Contacto» y el pie de página, con los estilos de Diego y de Elena.
+- En el navegador, `index.html` muestra el menú, «Sobre mí», «Proyectos», «Contacto» y el pie de página, con los estilos de Diego; el enlace «Galería» abre la
+  página de Elena.
 - En GitHub, en el historial de commits, aparecen los commits de todas las personas.
+
+Así queda `index.html` al final del taller. Comparalo con el tuyo:
+
+```html
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Mi sitio web</title>
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <h1>Mi sitio web</h1>
+    <nav>
+      <a href="#proyectos">Proyectos</a> |
+      <a href="#contacto">Contacto</a> |
+      <a href="galeria.html">Galería</a>
+    </nav>
+    <p>Esta es mi primera página, publicada con Git y GitHub.</p>
+    <h2>Sobre mí</h2>
+    <p>Estoy aprendiendo a crear sitios web.</p>
+    <h2 id="proyectos">Proyectos</h2>
+    <p>Mi primer proyecto es este sitio web, hecho en equipo con Git.</p>
+    <h2 id="contacto">Contacto</h2>
+    <p>Escribinos a equipo@ejemplo.com.</p>
+    <footer>
+      <p>© 2026 Equipo del taller de Git</p>
+    </footer>
+  </body>
+</html>
+```
+
+> 📌 El orden de «Proyectos», «Contacto» y el pie depende de **quién integró primero** y de cómo se resolvieron los conflictos. Si en tu grupo quedó en otro orden,
+> está bien, siempre que no falte nada y no queden marcas.
 
 ---
 

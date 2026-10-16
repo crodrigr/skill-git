@@ -50,13 +50,16 @@ Repartan **una tarea por persona**. En un grupo de 5, la tarea 6 queda como desa
 
 | # | Tarea | Qué hay que lograr | Archivos que se tocan |
 |---|---|---|---|
-| 1 | **Menú de navegación** | Un menú, debajo del título principal, con enlaces a las secciones de la página | `index.html` |
+| 1 | **Menú de navegación** | Un menú, debajo del título principal, con enlaces a «Proyectos», «Contacto» y «Galería» | `index.html` |
 | 2 | **Sección «Proyectos»** | Una sección nueva, al final de la página, con un subtítulo y la descripción de al menos un proyecto | `index.html` |
 | 3 | **Sección «Contacto»** | Una sección nueva, al final de la página, con un subtítulo y una forma de contacto (ficticia) | `index.html` |
 | 4 | **Pie de página** | Un pie de página con el año y el nombre del equipo | `index.html` |
 | 5 | **Estilos del texto** | Color para los subtítulos y una altura de línea cómoda para los párrafos | `css/estilos.css` |
 | 6 | **Página «Galería»** | Una página nueva, `galeria.html`, con la misma hoja de estilos, y un estilo propio para ella al final de la hoja | `galeria.html`, `css/estilos.css` |
 
+> 📋 **El código ya está escrito.** El HTML y el CSS de cada tarea están listos para copiar en la sección «El código de cada tarea» de la
+> [Guía 02](guia-02-solucion-taller-equipo.md#-el-código-de-cada-tarea). No hace falta inventarlo: el objetivo es **practicar Git**, no escribir el sitio.
+>
 > ⚠️ Las tareas 2, 3 y 4 agregan contenido **en el mismo lugar** de `index.html`, y las tareas 5 y 6 agregan reglas **al final** de `css/estilos.css`. Van a
 > aparecer conflictos: resolverlos es parte del taller.
 
