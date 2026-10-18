@@ -59,15 +59,12 @@ Requisitos:
    - Un conflicto en `css/styles.css` (entre `feature/navbar` y `fix/colores-contraste`).
    - Un conflicto en `index.html` (entre `feature/navbar` y `hotfix/titulo-pagina`).
    - Un conflicto en `js/main.js` (entre `feature/formulario-contacto` y `feature/footer`). Ver Anexo.
-3. Usa **ambas estrategias** al menos una vez cada una:
-   - Merge que deje un commit de integración visible en el historial.
-   - Integración lineal (fast-forward o rebase de la rama sobre `master`).
-4. Al resolver conflictos:
+3. Al resolver conflictos:
    - Conserva el trabajo relevante de ambas ramas (no basta con elegir un lado).
    - Elimina todos los marcadores `<<<<<<<`, `=======`, `>>>>>>>`.
    - El mensaje del merge debe indicar qué conflicto se resolvió y cómo.
-5. Verifica que el sitio abre sin errores en el navegador tras cada integración.
-6. Elimina las ramas ya integradas (local y remota). **Conserva** `hotfix/titulo-pagina` sin eliminar como evidencia de uso.
+4. Verifica que el sitio abre sin errores en el navegador tras cada integración.
+5. Elimina las ramas ya integradas (local y remota). **Conserva** `hotfix/titulo-pagina` sin eliminar como evidencia de uso.
 
 ## Parte 4 — Sincronización con GitHub en un solo repositorio (25 pts)
 
@@ -76,9 +73,8 @@ Se trabaja únicamente con tu repositorio `sitio-cafe-aroma`. Los cambios "de ot
 1. En **GitHub (web)**, edita `README.md` sobre `master` agregando una sección "Instalación" y guarda el cambio (commit).
 2. En tu repositorio **local**, sin traer los cambios del remoto, modifica la **misma sección** del `README.md`, haz commit e intenta subirlo. Debe ser **rechazado**.
 3. Sincroniza integrando con merge, resuelve el conflicto que aparezca y sube el resultado.
-4. Repite el procedimiento (nuevo cambio en GitHub web sobre `README.md` y cambio local conflictivo), pero esta vez sincroniza integrando con rebase. Resuelve el conflicto y sube el resultado.
-5. Al menos una vez, inspecciona las diferencias con el remoto antes de integrar.
-6. Crea un **tag** anotado `v1.0.0` sobre el estado final de `master` y súbelo al remoto.
+4. Al menos una vez, inspecciona las diferencias con el remoto antes de integrar.
+5. Crea un **tag** anotado `v1.0.0` sobre el estado final de `master` y súbelo al remoto.
 
 ## Anexo — Código que debe escribir el estudiante
 
@@ -347,8 +343,8 @@ El repositorio debe contener, en el remoto:
 |----------|:------:|-------------|
 | Repositorio y estructura inicial | 10 | `master`, estructura, commit inicial, repositorio creado en GitHub, `origin` configurado y `master` como rama predeterminada |
 | Ramas por cambio y commits | 30 | 6 ramas con nombres correctos, ≥2 commits por rama, ramas subidas al remoto |
-| Integración y conflictos | 35 | Orden correcto, ≥3 conflictos resueltos sin perder trabajo, uso de merge `--no-ff` y rebase/ff, sitio funcional, limpieza de ramas |
-| Sincronización (pull/push/fetch/tag) | 25 | Push rechazado y resuelto, `pull` y `pull --rebase` con edición desde GitHub web, `fetch`, tag `v1.0.0` |
+| Integración y conflictos | 35 | Orden correcto, ≥3 conflictos resueltos sin perder trabajo, sitio funcional, limpieza de ramas |
+| Sincronización (pull/push/fetch/tag) | 25 | Push rechazado y resuelto, `pull` con edición desde GitHub web, `fetch`, tag `v1.0.0` |
 | **Total** | **100** | |
 
 **Penalizaciones:**
