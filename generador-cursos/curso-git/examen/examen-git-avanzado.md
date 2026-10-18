@@ -58,8 +58,8 @@ Requisitos:
 1. Integra las ramas a `master` **en este orden**: `feature/navbar` → `feature/menu-productos` → `feature/formulario-contacto` → `feature/footer` → `fix/colores-contraste` → `hotfix/titulo-pagina`.
 2. Se deben producir y resolver **al menos 3 conflictos reales**:
    - Un conflicto en `css/styles.css` (entre `feature/navbar` y `fix/colores-contraste`).
-   - Un conflicto en `index.html` o en el pie/encabezado común (entre `feature/footer` y `feature/navbar` u otra rama).
-   - Un conflicto adicional a elección (p. ej. `README.md` o `js/main.js`).
+   - Un conflicto en `index.html` (entre `feature/navbar` y `hotfix/titulo-pagina`).
+   - Un conflicto en `js/main.js` (entre `feature/formulario-contacto` y `feature/footer`). Ver Anexo.
 3. Usa **ambas estrategias** al menos una vez cada una:
    - `git merge --no-ff` (merge commit visible en el historial).
    - Fast-forward (cuando sea posible) o `git rebase` de la rama sobre `master` antes de integrar.
@@ -93,6 +93,251 @@ En `README.md` del repositorio incluye una sección **"Informe del examen"** con
    - ¿Por qué fue rechazado el `push` en la Parte 4 y qué indica Git?
    - ¿Qué hace `git push --force` y por qué es peligroso en `master`?
    - ¿Cómo deshacerías un merge ya subido al remoto sin reescribir el historial? (menciona `git revert -m`).
+
+## Anexo — Código que debe escribir el estudiante
+
+> Copia el código tal cual. Está diseñado para que los conflictos de la Parte 3 aparezcan de forma natural: **respeta las líneas que cada rama modifica** y el orden de integración indicado.
+
+### A. Código base (commit inicial, rama `master`)
+
+**`index.html`** (`menu.html` y `contacto.html` son iguales cambiando `<title>`, el contenido de `<main>` y el marcador indicado)
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Aroma - Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Cafe Aroma</h1>
+  </header>
+
+  <main>
+    <h2>Bienvenido</h2>
+    <p>El mejor café de especialidad, tostado cada mañana.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+```
+
+- `menu.html`: `<title>Cafe Aroma - Menú</title>`, `<h2>Nuestro menú</h2>` y, dentro de `<main>`, la línea `<!-- PRODUCTOS -->`.
+- `contacto.html`: `<title>Cafe Aroma - Contacto</title>`, `<h2>Contacto</h2>` y, dentro de `<main>`, la línea `<!-- FORMULARIO -->`.
+- Las tres páginas mantienen `<header><h1>Cafe Aroma</h1></header>` idéntico y la línea `<!-- FOOTER -->`.
+
+**`css/styles.css`**
+
+```css
+/* ===== BASE ===== */
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f0e6; color: #333; }
+main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+
+/* ===== CABECERA ===== */
+header {
+  background: #6f4e37;
+  color: #cccccc;
+  padding: 1rem;
+}
+header h1 { margin: 0; }
+
+/* ===== MENU ===== */
+
+/* ===== CONTACTO ===== */
+
+/* ===== FOOTER ===== */
+```
+
+**`js/main.js`**
+
+```js
+console.log("Cafe Aroma cargado");
+```
+
+---
+
+### B. Código por rama
+
+#### 1. `feature/navbar`
+
+En **las tres páginas** reemplaza el bloque `<header>` por:
+
+```html
+  <header>
+    <h1 class="logo">Cafe Aroma</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+```
+
+En `styles.css` reemplaza el bloque `/* ===== CABECERA ===== */` por:
+
+```css
+/* ===== CABECERA ===== */
+header {
+  background: #4e342e;
+  color: #cccccc;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 { margin: 0; }
+nav a { color: #f5f0e6; text-decoration: none; margin-left: 1.5rem; }
+nav a:hover { text-decoration: underline; }
+```
+
+#### 2. `feature/menu-productos`
+
+En `menu.html` reemplaza `<!-- PRODUCTOS -->` por:
+
+```html
+    <ul class="productos">
+      <li><h3>Espresso</h3><p>Shot intenso de café de origen único.</p><span class="precio">$2.50</span></li>
+      <li><h3>Cappuccino</h3><p>Espresso, leche vaporizada y espuma.</p><span class="precio">$3.50</span></li>
+      <li><h3>Latte</h3><p>Suave, con abundante leche cremosa.</p><span class="precio">$3.80</span></li>
+      <li><h3>Mocca</h3><p>Café, chocolate y crema batida.</p><span class="precio">$4.20</span></li>
+      <li><h3>Cold Brew</h3><p>Infusionado en frío durante 18 horas.</p><span class="precio">$4.00</span></li>
+      <li><h3>Croissant</h3><p>Hojaldre de mantequilla recién horneado.</p><span class="precio">$2.90</span></li>
+    </ul>
+```
+
+En `styles.css`, debajo del comentario `/* ===== MENU ===== */`:
+
+```css
+.productos { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+.productos li { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,.1); }
+.productos h3 { margin-top: 0; color: #4e342e; }
+.precio { font-weight: bold; color: #8b5a2b; }
+```
+
+#### 3. `feature/formulario-contacto`
+
+En `contacto.html` reemplaza `<!-- FORMULARIO -->` por:
+
+```html
+    <form id="form-contacto" novalidate>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+      <p id="estado" role="alert"></p>
+    </form>
+```
+
+En `styles.css`, debajo de `/* ===== CONTACTO ===== */`:
+
+```css
+form { display: grid; gap: .5rem; max-width: 500px; }
+input, textarea { padding: .6rem; border: 1px solid #bbb; border-radius: 4px; font: inherit; }
+button { padding: .7rem; background: #4e342e; color: #fff; border: 0; border-radius: 4px; cursor: pointer; }
+#estado { color: #b00020; min-height: 1.2em; }
+```
+
+En `js/main.js` **reemplaza** la línea `console.log(...)` por:
+
+```js
+const form = document.getElementById("form-contacto");
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const estado = document.getElementById("estado");
+    const nombre = form.nombre.value.trim();
+    const correo = form.correo.value.trim();
+    const mensaje = form.mensaje.value.trim();
+    const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
+
+    if (!nombre || !correoValido || mensaje.length < 10) {
+      estado.textContent = "Completa todos los campos (mensaje de al menos 10 caracteres) con un correo válido.";
+      return;
+    }
+    estado.style.color = "green";
+    estado.textContent = "¡Gracias " + nombre + ", te responderemos pronto!";
+    form.reset();
+  });
+}
+```
+
+#### 4. `feature/footer`
+
+En **las tres páginas** reemplaza `<!-- FOOTER -->` por:
+
+```html
+  <footer>
+    <p>&copy; <span id="anio"></span> Cafe Aroma · Calle Principal 123</p>
+    <p>
+      <a href="https://facebook.com">Facebook</a> ·
+      <a href="https://instagram.com">Instagram</a> ·
+      <a href="https://x.com">X</a>
+    </p>
+  </footer>
+```
+
+En `styles.css`, debajo de `/* ===== FOOTER ===== */`:
+
+```css
+footer { background: #3e2723; color: #f5f0e6; text-align: center; padding: 1.5rem 1rem; margin-top: 3rem; }
+footer a { color: #ffcc80; }
+```
+
+En `js/main.js` **reemplaza** la línea `console.log(...)` por:
+
+```js
+document.getElementById("anio").textContent = new Date().getFullYear();
+```
+
+#### 5. `fix/colores-contraste`
+
+En `styles.css` reemplaza **solo** el bloque `header { ... }` de la cabecera (sin tocar `header h1`) por:
+
+```css
+header {
+  background: #3e2723;
+  color: #ffffff;
+  padding: 1rem;
+}
+```
+
+Y en `body` cambia `color: #333;` por `color: #212121;`.
+
+#### 6. `hotfix/titulo-pagina`
+
+En `index.html` corrige el error ortográfico (falta la tilde):
+
+```html
+  <title>Café Aroma - Inicio</title>
+...
+    <h1>Café Aroma</h1>
+```
+
+---
+
+### C. Conflictos que deben aparecer (guía para el evaluador)
+
+| Merge | Archivo | Causa |
+|-------|---------|-------|
+| `fix/colores-contraste` → `master` | `css/styles.css` | `feature/navbar` y el fix modifican las mismas líneas de `header { ... }` (`background`, `padding`, `color`). Resolver combinando `display:flex` de navbar con los colores del fix. |
+| `hotfix/titulo-pagina` → `master` | `index.html` | `feature/navbar` cambió `<h1>Cafe Aroma</h1>` a `<h1 class="logo">…</h1>`; el hotfix corrige la misma línea. Resolver dejando `<h1 class="logo">Café Aroma</h1>`. |
+| `feature/footer` → `master` | `js/main.js` | `feature/formulario-contacto` y `feature/footer` reemplazan la misma línea `console.log`. Resolver conservando **ambos** bloques de código. |
+
+> Si el estudiante integra en otro orden, los conflictos pueden aparecer en otros merges; lo importante es que resuelva al menos tres sin perder el trabajo de ninguna rama.
+
+---
 
 ---
 
