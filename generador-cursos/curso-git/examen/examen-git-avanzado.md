@@ -2,12 +2,12 @@
 
 **Modalidad:** práctico, individual, con acceso a documentación oficial de Git.
 **Duración sugerida:** 3 horas
-**Entrega:** enlace al repositorio remoto (GitHub/GitLab/Bitbucket), público o con acceso para el evaluador.
+**Entrega:** enlace al repositorio en **GitHub**, público o con acceso para el evaluador.
 **Puntaje total:** 100 puntos (aprobación: 70)
 
 ## Objetivo
 
-Demostrar dominio del flujo de trabajo con Git: creación de repositorio, manejo de ramas, integración a `master`, resolución de conflictos y sincronización con un remoto (`merge`, `pull`, `push`).
+Demostrar dominio del flujo de trabajo con Git: creación de repositorio, manejo de ramas, integración a `master`, resolución de conflictos y sincronización con un remoto en GitHub (`merge`, `pull`, `push`).
 
 ## Escenario
 
@@ -33,7 +33,14 @@ Eres el desarrollador de un **sitio web** (HTML/CSS/JS simple) para la cafeterí
    ```
 4. El `.gitignore` debe excluir como mínimo: `node_modules/`, `*.log`, `.env`, `.DS_Store`, `dist/`.
 5. Realiza el **commit inicial** con mensaje descriptivo.
-6. Crea un repositorio vacío en el servicio remoto, agrégalo como `origin` y sube `master` con `git push -u origin master`.
+6. Crea en **GitHub** un repositorio nuevo llamado `sitio-cafe-aroma` (en la web, o con `gh repo create sitio-cafe-aroma --public`). **No** lo inicialices con README, `.gitignore` ni licencia.
+7. Agrégalo como remoto y sube `master`:
+   ```bash
+   git remote add origin https://github.com/<usuario>/sitio-cafe-aroma.git
+   git push -u origin master
+   ```
+8. Verifica con `git remote -v` y comprobando en GitHub que el commit inicial aparece en `master`. Configura `master` como rama predeterminada del repositorio (*Settings → Branches*).
+   > Autenticación: usa un *Personal Access Token* o SSH; no subas credenciales al repositorio.
 
 ## Parte 2 — Flujo de ramas por cambio (30 pts)
 
@@ -340,7 +347,7 @@ En `index.html` corrige el error ortográfico (falta la tilde):
 
 ## Entrega
 
-Envía **un único enlace** al repositorio remoto, por ejemplo:
+Envía **un único enlace** al repositorio en GitHub (debe abrirse sin pedir permisos al evaluador), por ejemplo:
 
 ```
 https://github.com/<usuario>/sitio-cafe-aroma
@@ -357,7 +364,7 @@ El repositorio debe contener, en el remoto:
 
 | Criterio | Puntos | Indicadores |
 |----------|:------:|-------------|
-| Repositorio y estructura inicial | 10 | `master`, estructura, `.gitignore` correcto, commit inicial, remoto configurado |
+| Repositorio y estructura inicial | 10 | `master`, estructura, `.gitignore` correcto, commit inicial, repositorio creado en GitHub, `origin` configurado y `master` como rama predeterminada |
 | Ramas por cambio y commits | 30 | 6 ramas con nombres correctos, ≥2 commits por rama, mensajes `tipo: descripción`, ramas subidas al remoto |
 | Integración y conflictos | 30 | Orden correcto, ≥3 conflictos resueltos sin perder trabajo, uso de merge `--no-ff` y rebase/ff, sitio funcional, limpieza de ramas |
 | Sincronización (pull/push/fetch/tag) | 20 | Push rechazado y resuelto, `pull` y `pull --rebase`, `fetch`, tag `v1.0.0` |
