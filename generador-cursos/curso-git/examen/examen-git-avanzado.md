@@ -74,7 +74,6 @@ Se trabaja únicamente con tu repositorio `sitio-cafe-aroma`. Los cambios "de ot
 2. En tu repositorio **local**, sin traer los cambios del remoto, modifica la **misma sección** del `README.md`, haz commit e intenta subirlo. Debe ser **rechazado**.
 3. Sincroniza integrando con merge, resuelve el conflicto que aparezca y sube el resultado.
 4. Al menos una vez, inspecciona las diferencias con el remoto antes de integrar.
-5. Crea un **tag** anotado `v1.0.0` sobre el estado final de `master` y súbelo al remoto.
 
 ## Anexo — Código que debe escribir el estudiante
 
@@ -334,7 +333,6 @@ https://github.com/<usuario>/sitio-cafe-aroma
 El repositorio debe contener, en el remoto:
 - La rama `master` con todos los cambios integrados.
 - El historial completo (no se acepta historial aplastado ni reiniciado).
-- El tag `v1.0.0`.
 - La rama `hotfix/titulo-pagina`.
 
 ## Rúbrica de evaluación
@@ -344,7 +342,7 @@ El repositorio debe contener, en el remoto:
 | Repositorio y estructura inicial | 10 | `master`, estructura, commit inicial, repositorio creado en GitHub, `origin` configurado y `master` como rama predeterminada |
 | Ramas por cambio y commits | 30 | 6 ramas con nombres correctos, ≥2 commits por rama, ramas subidas al remoto |
 | Integración y conflictos | 35 | Orden correcto, ≥3 conflictos resueltos sin perder trabajo, sitio funcional, limpieza de ramas |
-| Sincronización (pull/push/fetch/tag) | 25 | Push rechazado y resuelto, `pull` con edición desde GitHub web, `fetch`, tag `v1.0.0` |
+| Sincronización (pull/push/fetch) | 25 | Push rechazado y resuelto, `pull` con edición desde GitHub web, `fetch` |
 | **Total** | **100** | |
 
 **Penalizaciones:**
@@ -358,6 +356,5 @@ git clone <url> && cd sitio-cafe-aroma
 git branch -a                                  # ramas esperadas
 git log --oneline --graph --all --decorate     # merges y ramas
 git log --merges --oneline                     # ≥ 3 merge commits
-git tag                                        # v1.0.0
 grep -rn "<<<<<<<\|>>>>>>>" . --exclude-dir=.git   # no debe haber resultados
 ```
