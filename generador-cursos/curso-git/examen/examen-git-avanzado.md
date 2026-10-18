@@ -50,10 +50,9 @@ Se solicitan los siguientes cambios. **Cada uno va en su propia rama**, creada d
 
 Requisitos:
 - Los nombres de rama deben seguir exactamente la convención indicada.
-- Los mensajes de commit deben seguir el formato `tipo: descripción` (`feat`, `fix`, `style`, `docs`).
-- Al menos **dos ramas** deben subirse al remoto antes de integrarse .
+- Al menos **dos ramas** deben subirse al remoto antes de integrarse.
 
-## Parte 3 — Integración a `master` y resolución de conflictos (30 pts)
+## Parte 3 — Integración a `master` y resolución de conflictos (35 pts)
 
 1. Integra las ramas a `master` **en este orden**: `feature/navbar` → `feature/menu-productos` → `feature/formulario-contacto` → `feature/footer` → `fix/colores-contraste` → `hotfix/titulo-pagina`.
 2. Se deben producir y resolver **al menos 3 conflictos reales**:
@@ -70,26 +69,16 @@ Requisitos:
 5. Verifica que el sitio abre sin errores en el navegador tras cada integración.
 6. Elimina las ramas ya integradas (local y remota). **Conserva** `hotfix/titulo-pagina` sin eliminar como evidencia de uso.
 
-## Parte 4 — Sincronización: pull, push y trabajo en dos copias (20 pts)
+## Parte 4 — Sincronización con GitHub en un solo repositorio (25 pts)
 
-Simula el trabajo de dos desarrolladores sobre el mismo remoto:
+Se trabaja únicamente con tu repositorio `sitio-cafe-aroma`. Los cambios "de otro desarrollador" los simulas editando archivos directamente en la interfaz web de GitHub.
 
-1. Clona tu repositorio en otra carpeta (`sitio-cafe-aroma-dev2`) con una copia clonada.
-2. En la **copia 2**: crea un cambio en `README.md` (agrega sección "Instalación") directamente sobre `master`, haz commit y súbelo.
-3. En la **copia 1** (original): sin traer los cambios del remoto, modifica la **misma sección** del `README.md`, haz commit e intenta subirlo. Debe ser **rechazado** (non-fast-forward).
-4. Sincroniza integrando con merge y, en una segunda situación similar, integrando con rebase. Resuelve el conflicto que aparezca y sube el resultado.
+1. En **GitHub (web)**, edita `README.md` sobre `master` agregando una sección "Instalación" y guarda el cambio (commit).
+2. En tu repositorio **local**, sin traer los cambios del remoto, modifica la **misma sección** del `README.md`, haz commit e intenta subirlo. Debe ser **rechazado**.
+3. Sincroniza integrando con merge, resuelve el conflicto que aparezca y sube el resultado.
+4. Repite el procedimiento (nuevo cambio en GitHub web sobre `README.md` y cambio local conflictivo), pero esta vez sincroniza integrando con rebase. Resuelve el conflicto y sube el resultado.
 5. Al menos una vez, inspecciona las diferencias con el remoto antes de integrar.
-6. Crea y sube un **tag** `v1.0.0` sobre el estado final de `master` (anotado) y súbelo al remoto.
-
-## Parte 5 — Revertir y cierre del repositorio (10 pts)
-
-Todo se demuestra con comandos y resultados en el repositorio; **no hay preguntas teóricas**.
-
-1. Crea la rama `feature/banner-promo` con un banner en `index.html` (`<div class="promo">¡2x1 en cappuccino!</div>`) y este estilo al final de `styles.css`: `.promo { background: #ffcc80; color: #3e2723; text-align: center; padding: .8rem; font-weight: bold; }`. Intégrala a `master` con un commit de merge y súbelo.
-2. Deshaz ese merge **sin reescribir el historial** con un commit nuevo que lo revierta, y súbelo. El banner debe desaparecer del sitio y el merge original debe seguir en el historial.
-3. Crea el archivo `EVIDENCIA.md` con el grafo del historial (ramas y merges) en un bloque de código, haz commit y súbelo a `master`.
-4. Confirma que no quedan cambios pendientes y que `master` local y remoto apuntan al mismo commit.
-
+6. Crea un **tag** anotado `v1.0.0` sobre el estado final de `master` y súbelo al remoto.
 
 ## Anexo — Código que debe escribir el estudiante
 
@@ -351,23 +340,20 @@ El repositorio debe contener, en el remoto:
 - El historial completo (no se acepta historial aplastado ni reiniciado).
 - El tag `v1.0.0`.
 - La rama `hotfix/titulo-pagina`.
-- El archivo `EVIDENCIA.md` y el commit de `revert` del banner.
 
 ## Rúbrica de evaluación
 
 | Criterio | Puntos | Indicadores |
 |----------|:------:|-------------|
 | Repositorio y estructura inicial | 10 | `master`, estructura, commit inicial, repositorio creado en GitHub, `origin` configurado y `master` como rama predeterminada |
-| Ramas por cambio y commits | 30 | 6 ramas con nombres correctos, ≥2 commits por rama, mensajes `tipo: descripción`, ramas subidas al remoto |
-| Integración y conflictos | 30 | Orden correcto, ≥3 conflictos resueltos sin perder trabajo, uso de merge `--no-ff` y rebase/ff, sitio funcional, limpieza de ramas |
-| Sincronización (pull/push/fetch/tag) | 20 | Push rechazado y resuelto, `pull` y `pull --rebase`, `fetch`, tag `v1.0.0` |
-| Revertir y cierre | 10 | Merge de `feature/banner-promo`, `revert -m 1` subido sin reescribir historial, `EVIDENCIA.md` con el grafo, `master` = `origin/master` |
+| Ramas por cambio y commits | 30 | 6 ramas con nombres correctos, ≥2 commits por rama, ramas subidas al remoto |
+| Integración y conflictos | 35 | Orden correcto, ≥3 conflictos resueltos sin perder trabajo, uso de merge `--no-ff` y rebase/ff, sitio funcional, limpieza de ramas |
+| Sincronización (pull/push/fetch/tag) | 25 | Push rechazado y resuelto, `pull` y `pull --rebase` con edición desde GitHub web, `fetch`, tag `v1.0.0` |
 | **Total** | **100** | |
 
 **Penalizaciones:**
 - −10: marcadores de conflicto olvidados en algún archivo.
 - −10: uso de `push --force` sobre `master` o historial reescrito en el remoto.
-- −5: commits sin mensaje descriptivo (p. ej. "update", "cambios").
 
 ## Verificación sugerida para el evaluador
 
