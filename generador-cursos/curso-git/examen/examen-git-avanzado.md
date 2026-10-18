@@ -81,18 +81,15 @@ Simula el trabajo de dos desarrolladores sobre el mismo remoto:
 5. Usa `git fetch` + `git log origin/master..master` (o similar) al menos una vez para inspeccionar diferencias antes de integrar.
 6. Crea y sube un **tag** `v1.0.0` sobre el estado final de `master` (`git tag -a` y `git push origin v1.0.0`).
 
-## Parte 5 — Documentación y evidencia (10 pts)
+## Parte 5 — Revertir y cierre del repositorio (10 pts)
 
-En `README.md` del repositorio incluye una sección **"Informe del examen"** con:
+Todo se demuestra con comandos y resultados en el repositorio; **no hay preguntas teóricas**.
 
-1. Salida de `git log --oneline --graph --all --decorate` (pegada como bloque de código) que muestre el historial con ramas y merges.
-2. Una tabla con los conflictos resueltos: archivo, ramas involucradas, cómo se resolvió.
-3. Respuestas breves (2–4 líneas cada una):
-   - ¿Cuál es la diferencia entre `merge` y `rebase`, y cuándo usarías cada uno?
-   - ¿Qué diferencia hay entre `git fetch` y `git pull`?
-   - ¿Por qué fue rechazado el `push` en la Parte 4 y qué indica Git?
-   - ¿Qué hace `git push --force` y por qué es peligroso en `master`?
-   - ¿Cómo deshacerías un merge ya subido al remoto sin reescribir el historial? (menciona `git revert -m`).
+1. Crea la rama `feature/banner-promo` con un banner en `index.html` (`<div class="promo">¡2x1 en cappuccino!</div>`) y este estilo al final de `styles.css`: `.promo { background: #ffcc80; color: #3e2723; text-align: center; padding: .8rem; font-weight: bold; }`. Intégrala a `master` con `git merge --no-ff` y haz `push`.
+2. Deshaz ese merge **sin reescribir el historial** usando `git revert -m 1 <hash-del-merge>` y haz `push`. El banner debe desaparecer del sitio y el merge original debe seguir en el historial.
+3. Crea el archivo `EVIDENCIA.md` con la salida de `git log --oneline --graph --all --decorate` en un bloque de código, haz commit y `push` a `master`.
+4. Confirma que `git status` queda limpio y que `master` local y `origin/master` apuntan al mismo commit.
+
 
 ## Anexo — Código que debe escribir el estudiante
 
@@ -354,7 +351,7 @@ El repositorio debe contener, en el remoto:
 - El historial completo (no se acepta historial aplastado ni reiniciado).
 - El tag `v1.0.0`.
 - La rama `hotfix/titulo-pagina`.
-- El README con el informe.
+- El archivo `EVIDENCIA.md` y el commit de `revert` del banner.
 
 ## Rúbrica de evaluación
 
@@ -364,7 +361,7 @@ El repositorio debe contener, en el remoto:
 | Ramas por cambio y commits | 30 | 6 ramas con nombres correctos, ≥2 commits por rama, mensajes `tipo: descripción`, ramas subidas al remoto |
 | Integración y conflictos | 30 | Orden correcto, ≥3 conflictos resueltos sin perder trabajo, uso de merge `--no-ff` y rebase/ff, sitio funcional, limpieza de ramas |
 | Sincronización (pull/push/fetch/tag) | 20 | Push rechazado y resuelto, `pull` y `pull --rebase`, `fetch`, tag `v1.0.0` |
-| Documentación e informe | 10 | Grafo del log, tabla de conflictos, respuestas conceptuales correctas |
+| Revertir y cierre | 10 | Merge de `feature/banner-promo`, `revert -m 1` subido sin reescribir historial, `EVIDENCIA.md` con el grafo, `master` = `origin/master` |
 | **Total** | **100** | |
 
 **Penalizaciones:**
