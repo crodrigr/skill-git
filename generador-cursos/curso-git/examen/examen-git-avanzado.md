@@ -1,6 +1,6 @@
 # Examen Práctico de Git — Complejidad Alta
 
-**Modalidad:** práctico, individual, con acceso a documentación oficial de Git.
+**Modalidad:** práctico, individual.
 **Duración sugerida:** 3 horas
 **Entrega:** enlace al repositorio en **GitHub**, público o con acceso para el evaluador.
 **Puntaje total:** 100 puntos (aprobación: 70)
