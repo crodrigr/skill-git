@@ -7,7 +7,7 @@
 
 ## Objetivo
 
-Demostrar dominio del flujo de trabajo con Git: creación de repositorio, manejo de ramas, integración a `master`, resolución de conflictos y sincronización con un remoto en GitHub (`merge`, `pull`, `push`).
+Demostrar dominio del flujo de trabajo con Git: creación de repositorio, manejo de ramas, integración a `master`, resolución de conflictos y sincronización con un remoto en GitHub.
 
 ## Escenario
 
@@ -17,7 +17,7 @@ Eres el desarrollador de un **sitio web** (HTML/CSS/JS simple) para la cafeterí
 
 ## Parte 1 — Creación del repositorio (10 pts)
 
-1. Crea una carpeta `sitio-cafe-aroma` e inicializa un repositorio con `git init`.
+1. Crea una carpeta `sitio-cafe-aroma` e inicializa un repositorio.
 2. Asegúrate de que la rama principal se llame **`master`**.
 3. Crea la estructura mínima del sitio:
    ```
@@ -28,19 +28,12 @@ Eres el desarrollador de un **sitio web** (HTML/CSS/JS simple) para la cafeterí
    ├── css/styles.css
    ├── js/main.js
    ├── img/            (con al menos un archivo, p. ej. logo.png)
-   ├── .gitignore
    └── README.md
    ```
-4. El `.gitignore` debe excluir como mínimo: `node_modules/`, `*.log`, `.env`, `.DS_Store`, `dist/`.
-5. Realiza el **commit inicial** con mensaje descriptivo.
-6. Crea en **GitHub** un repositorio nuevo llamado `sitio-cafe-aroma` (en la web, o con `gh repo create sitio-cafe-aroma --public`). **No** lo inicialices con README, `.gitignore` ni licencia.
-7. Agrégalo como remoto y sube `master`:
-   ```bash
-   git remote add origin https://github.com/<usuario>/sitio-cafe-aroma.git
-   git push -u origin master
-   ```
-8. Verifica con `git remote -v` y comprobando en GitHub que el commit inicial aparece en `master`. Configura `master` como rama predeterminada del repositorio (*Settings → Branches*).
-   > Autenticación: usa un *Personal Access Token* o SSH; no subas credenciales al repositorio.
+4. Realiza el **commit inicial** con mensaje descriptivo.
+5. Crea en **GitHub** un repositorio nuevo llamado `sitio-cafe-aroma`, vacío (sin README ni licencia).
+6. Conecta el repositorio local con el de GitHub (remoto `origin`) y sube `master`.
+7. Verifica en GitHub que el commit inicial aparece en `master` y que `master` es la rama predeterminada del repositorio.
 
 ## Parte 2 — Flujo de ramas por cambio (30 pts)
 
@@ -58,7 +51,7 @@ Se solicitan los siguientes cambios. **Cada uno va en su propia rama**, creada d
 Requisitos:
 - Los nombres de rama deben seguir exactamente la convención indicada.
 - Los mensajes de commit deben seguir el formato `tipo: descripción` (`feat`, `fix`, `style`, `docs`).
-- Al menos **dos ramas** deben subirse al remoto antes de integrarse (`git push -u origin <rama>`).
+- Al menos **dos ramas** deben subirse al remoto antes de integrarse .
 
 ## Parte 3 — Integración a `master` y resolución de conflictos (30 pts)
 
@@ -68,34 +61,34 @@ Requisitos:
    - Un conflicto en `index.html` (entre `feature/navbar` y `hotfix/titulo-pagina`).
    - Un conflicto en `js/main.js` (entre `feature/formulario-contacto` y `feature/footer`). Ver Anexo.
 3. Usa **ambas estrategias** al menos una vez cada una:
-   - `git merge --no-ff` (merge commit visible en el historial).
-   - Fast-forward (cuando sea posible) o `git rebase` de la rama sobre `master` antes de integrar.
+   - Merge que deje un commit de integración visible en el historial.
+   - Integración lineal (fast-forward o rebase de la rama sobre `master`).
 4. Al resolver conflictos:
    - Conserva el trabajo relevante de ambas ramas (no basta con elegir un lado).
    - Elimina todos los marcadores `<<<<<<<`, `=======`, `>>>>>>>`.
    - El mensaje del merge debe indicar qué conflicto se resolvió y cómo.
 5. Verifica que el sitio abre sin errores en el navegador tras cada integración.
-6. Elimina las ramas ya integradas (local y remota) con `git branch -d` y `git push origin --delete`. **Conserva** `hotfix/titulo-pagina` sin eliminar como evidencia de uso.
+6. Elimina las ramas ya integradas (local y remota). **Conserva** `hotfix/titulo-pagina` sin eliminar como evidencia de uso.
 
 ## Parte 4 — Sincronización: pull, push y trabajo en dos copias (20 pts)
 
 Simula el trabajo de dos desarrolladores sobre el mismo remoto:
 
-1. Clona tu repositorio en otra carpeta (`sitio-cafe-aroma-dev2`) con `git clone`.
-2. En la **copia 2**: crea un cambio en `README.md` (agrega sección "Instalación") directamente sobre `master`, haz commit y `git push`.
-3. En la **copia 1** (original): sin hacer `pull`, modifica la **misma sección** del `README.md`, haz commit e intenta `git push`. Debe ser **rechazado** (non-fast-forward).
-4. Resuelve usando `git pull` (merge) y, en una segunda situación similar, `git pull --rebase`. Resuelve el conflicto que aparezca y sube con `git push`.
-5. Usa `git fetch` + `git log origin/master..master` (o similar) al menos una vez para inspeccionar diferencias antes de integrar.
-6. Crea y sube un **tag** `v1.0.0` sobre el estado final de `master` (`git tag -a` y `git push origin v1.0.0`).
+1. Clona tu repositorio en otra carpeta (`sitio-cafe-aroma-dev2`) con una copia clonada.
+2. En la **copia 2**: crea un cambio en `README.md` (agrega sección "Instalación") directamente sobre `master`, haz commit y súbelo.
+3. En la **copia 1** (original): sin traer los cambios del remoto, modifica la **misma sección** del `README.md`, haz commit e intenta subirlo. Debe ser **rechazado** (non-fast-forward).
+4. Sincroniza integrando con merge y, en una segunda situación similar, integrando con rebase. Resuelve el conflicto que aparezca y sube el resultado.
+5. Al menos una vez, inspecciona las diferencias con el remoto antes de integrar.
+6. Crea y sube un **tag** `v1.0.0` sobre el estado final de `master` (anotado) y súbelo al remoto.
 
 ## Parte 5 — Revertir y cierre del repositorio (10 pts)
 
 Todo se demuestra con comandos y resultados en el repositorio; **no hay preguntas teóricas**.
 
-1. Crea la rama `feature/banner-promo` con un banner en `index.html` (`<div class="promo">¡2x1 en cappuccino!</div>`) y este estilo al final de `styles.css`: `.promo { background: #ffcc80; color: #3e2723; text-align: center; padding: .8rem; font-weight: bold; }`. Intégrala a `master` con `git merge --no-ff` y haz `push`.
-2. Deshaz ese merge **sin reescribir el historial** usando `git revert -m 1 <hash-del-merge>` y haz `push`. El banner debe desaparecer del sitio y el merge original debe seguir en el historial.
-3. Crea el archivo `EVIDENCIA.md` con la salida de `git log --oneline --graph --all --decorate` en un bloque de código, haz commit y `push` a `master`.
-4. Confirma que `git status` queda limpio y que `master` local y `origin/master` apuntan al mismo commit.
+1. Crea la rama `feature/banner-promo` con un banner en `index.html` (`<div class="promo">¡2x1 en cappuccino!</div>`) y este estilo al final de `styles.css`: `.promo { background: #ffcc80; color: #3e2723; text-align: center; padding: .8rem; font-weight: bold; }`. Intégrala a `master` con un commit de merge y súbelo.
+2. Deshaz ese merge **sin reescribir el historial** con un commit nuevo que lo revierta, y súbelo. El banner debe desaparecer del sitio y el merge original debe seguir en el historial.
+3. Crea el archivo `EVIDENCIA.md` con el grafo del historial (ramas y merges) en un bloque de código, haz commit y súbelo a `master`.
+4. Confirma que no quedan cambios pendientes y que `master` local y remoto apuntan al mismo commit.
 
 
 ## Anexo — Código que debe escribir el estudiante
@@ -364,7 +357,7 @@ El repositorio debe contener, en el remoto:
 
 | Criterio | Puntos | Indicadores |
 |----------|:------:|-------------|
-| Repositorio y estructura inicial | 10 | `master`, estructura, `.gitignore` correcto, commit inicial, repositorio creado en GitHub, `origin` configurado y `master` como rama predeterminada |
+| Repositorio y estructura inicial | 10 | `master`, estructura, commit inicial, repositorio creado en GitHub, `origin` configurado y `master` como rama predeterminada |
 | Ramas por cambio y commits | 30 | 6 ramas con nombres correctos, ≥2 commits por rama, mensajes `tipo: descripción`, ramas subidas al remoto |
 | Integración y conflictos | 30 | Orden correcto, ≥3 conflictos resueltos sin perder trabajo, uso de merge `--no-ff` y rebase/ff, sitio funcional, limpieza de ramas |
 | Sincronización (pull/push/fetch/tag) | 20 | Push rechazado y resuelto, `pull` y `pull --rebase`, `fetch`, tag `v1.0.0` |
@@ -375,7 +368,6 @@ El repositorio debe contener, en el remoto:
 - −10: marcadores de conflicto olvidados en algún archivo.
 - −10: uso de `push --force` sobre `master` o historial reescrito en el remoto.
 - −5: commits sin mensaje descriptivo (p. ej. "update", "cambios").
-- −5: archivos ignorables subidos al repositorio.
 
 ## Verificación sugerida para el evaluador
 
@@ -386,5 +378,4 @@ git log --oneline --graph --all --decorate     # merges y ramas
 git log --merges --oneline                     # ≥ 3 merge commits
 git tag                                        # v1.0.0
 grep -rn "<<<<<<<\|>>>>>>>" . --exclude-dir=.git   # no debe haber resultados
-git ls-files | grep -E "node_modules|\.log$|\.env$"  # no debe haber resultados
 ```
